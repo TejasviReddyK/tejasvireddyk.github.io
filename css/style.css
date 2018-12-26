@@ -344,64 +344,7 @@ h2 {
 
 
 main{
-  display:grid; grid-template-columns:200px repeat(2, 1fr) 300px; grid-gap:20px; margin-top:15px;
-}
-.banner{
-  grid-area:auto/auto/auto/span 3;
-}
-.banners-container{
-  height:400px; grid-column-end:span 3; position:relative;
-}
-.banners,
-.banner{
-  width:100%; height:100%;
-}
-.banners{
-  position:relative;
-}
-.banner{
-  position:absolute; transition:opacity 1s ease; display:none; padding:20px; box-sizing:border-box; border-radius:2px; background-color:#fafafa; box-shadow:0 1px 1px 0 rgba(60,64,67,.08),0 1px 3px 1px rgba(60,64,67,.16);
-}
-.banner.active{
-  display:block; animation:fade-in .5s ease;
-}
-.banner.in-transition{
-  opacity:0;
-}
-@keyframes fade-in{
-  from{opacity:0} to{opacity:1}
-}
-.banner h1{
-  text-transform:uppercase; font-family:Work Sans, sans-serif; font-size:1.125rem;
-}
-.banner-navigation{
-  position:absolute; right:20px; bottom:20px;
-}
-.next-banner,
-.previous-banner{
-  background-image:url(../images/arrow-down.svg); background-repeat:no-repeat; background-position:center; border:none; width:40px; height:40px; border-radius:50%;
-}
-.previous-banner{
-  transform:rotate(90deg);
-}
-.next-banner{
-  transform:rotate(-90deg);
-}
-.next-banner:hover,
-.next-banner:focus,
-.previous-banner:focus,
-.previous-banner:hover{
-  background-color:red;
-}
-.next-banner::-moz-focus-inner,
-.previous-banner::-moz-focus-inner{
-  border:none
-}
-.news{
-  grid-row-end:span 2;
-}
-.about-us{
-  grid-column-end:span 2;
+  margin-top:15px;
 }
 footer{
 	border-top:2px solid #c69a47; display:grid; grid-template-columns:1fr 300px; grid-gap:12px 32px; margin-top:20px; padding-top:12px; padding-left:2px;
