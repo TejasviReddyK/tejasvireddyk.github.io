@@ -6,7 +6,79 @@
   <title>Template</title>
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700|Work+Sans:700,900" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.typekit.net/vow0fff.css">
+  <style>
+  @media (min-width:1025px){
+  main{
+    display:grid; grid-template-columns:200px repeat(2, 1fr) 300px; grid-gap:20px;
+  }
+  .banner{
+    grid-area:auto/auto/auto/span 3;
+  }
+  .news{
+    grid-row-end:span 2; grid-column-start:4; grid-row-start:1;
+  }
+  .quick-links{
+    grid-column-start:1; grid-row-start:2;
+  }
+  .about-us{
+    grid-column-end:span 2;
+  }
+}
+@media (max-width:1024px){
+  main > section{
+    margin:20px 0;
+  }
+}
+.banners-container{
+  height:400px; grid-column-end:span 3; position:relative;
+}
+.banners,
+.banner{
+  width:100%; height:100%;
+}
+.banners{
+  position:relative;
+}
+.banner{
+  position:absolute; transition:opacity 1s ease; display:none; padding:20px; box-sizing:border-box; border-radius:2px; background-color:#fafafa; box-shadow:0 1px 1px 0 rgba(60,64,67,.08),0 1px 3px 1px rgba(60,64,67,.16);
+}
+.banner.active{
+  display:block; animation:fade-in .5s ease;
+}
+.banner.in-transition{
+  opacity:0;
+}
+@keyframes fade-in{
+  from{opacity:0} to{opacity:1}
+}
+.banner h1{
+  text-transform:uppercase; font-family:Work Sans, sans-serif; font-size:1.125rem;
+}
+.banner-navigation{
+  position:absolute; right:20px; bottom:20px;
+}
+.next-banner,
+.previous-banner{
+  background-image:url(../images/arrow-down.svg); background-repeat:no-repeat; background-position:center; border:none; width:40px; height:40px; border-radius:50%;
+}
+.previous-banner{
+  transform:rotate(90deg);
+}
+.next-banner{
+  transform:rotate(-90deg);
+}
+.next-banner:hover,
+.next-banner:focus,
+.previous-banner:focus,
+.previous-banner:hover{
+  background-color:red;
+}
+.next-banner::-moz-focus-inner,
+.previous-banner::-moz-focus-inner{
+  border:none
+}
+
+  </style>
 </head>
 <body>
   <header>
@@ -70,6 +142,11 @@
         </button>
       </div><!-- .banner-navigation -->
     </section>
+    <section class="about-us">
+      <h1 class="highlight">About Us</h1>
+      <p>The Telangana Open School Society is formerly a part of Andhra Pradesh Open School Society of the erstwhile state of Andhra Pradesh established in the year 1991 to provide a flexible type of non-formal education to the drop-out children.</p>
+      <p>Telangana Open School Society was formed and registered under A.P. Societies Registration Act, 2001 and it was functioning under the School Education Department, Government of Telangana.</p>
+    </section>
     <section class="news">
       <h1>News and Media</h1>
       <ul>
@@ -115,11 +192,6 @@
         <li><a href="">Notification</a></li>
         <li><a href="">Nominal Rolls</a></li>
       </ul>
-    </section>
-    <section class="about-us">
-      <h1 class="highlight">About Us</h1>
-      <p>The Telangana Open School Society is formerly a part of Andhra Pradesh Open School Society of the erstwhile state of Andhra Pradesh established in the year 1991 to provide a flexible type of non-formal education to the drop-out children.</p>
-      <p>Telangana Open School Society was formed and registered under A.P. Societies Registration Act, 2001 and it was functioning under the School Education Department, Government of Telangana.</p>
     </section>
   </main>
   <footer class="container">
