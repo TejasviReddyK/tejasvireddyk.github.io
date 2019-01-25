@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Template</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700|Rubik:700,900" rel="stylesheet">
+  <style>
+    .main-section > section + section{
+      margin-top:8rem;
+    }
+    .hierarchy,
+    .diet ol,
+    .deo-office ol{
+      list-style:none; padding:0;
+    }
+    .hierarchy li{
+      position:relative;
+    }
+    .hierarchy li:before{
+      content:""; height:36px; width:36px; background:url(images/arrow-forward.svg) no-repeat center; position:absolute;
+    }
+    li.chairman:before{
+      content:normal;
+    }
+    .level-name{
+      display:block; padding:12px; background-color:#f6f6f6;
+    }
+    .divisions{
+      list-style:none; padding-left:0;
+    }
+    .section-a,
+    .section-b,
+    .section-c,
+    .section-d,
+    .functions{
+      padding:0 32px;
+    }
+    .section-a .heading,
+    .section-b .heading,
+    .section-c .heading,
+    .section-d .heading{
+      display:block; background-color:#f6f6f6; margin:0 -32px; padding:8px 32px; border-bottom:1px solid #e7e7e7;
+    }
+    .section-a ul,
+    .section-b ul,
+    .section-c ul,
+    .section-d ul,
+    .functions ul{
+      padding-left:0;
+    }
+    .section-a li,
+    .section-b li,
+    .section-c li,
+    .section-d li,
+    .functions li{
+      list-style-type:disc; margin-top:0!important;
+    }
+    .section-a li:before,
+    .section-b li:before,
+    .section-c li:before,
+    .section-d li:before,
+    .functions li:before,
+    .diet > ol > li:first-child:before,
+    .deo-office > ol > li:first-child:before{
+      content:normal;
+    }
+    .diet > ol > li:first-child,
+    .deo-office > ol > li:first-child{
+      margin-top:0;
+    }
+    .supporting-staff span{
+      display:block; font-style:italic; font-size:14px;
+    }
+    @media (min-width:768px){
+      .hierarchy{
+        display:flex; flex-wrap:wrap;
+      }
+      .hierarchy li + li{
+        margin-top:36px;
+      }
+      .hierarchy li:before{
+        bottom:100%; left:50%; transform:translateX(-50%) rotate(90deg);
+      }
+      .chairman,
+      .vice-chairman,
+      .director{
+        width:100%;      
+      }
+      .director{
+        display:flex; flex-wrap:wrap;
+      }
+      .director .level-name,
+      .director .divisions{
+        width:100%; box-sizing:border-box;
+      }
+      .level-name{
+        text-align:center;
+      }
+      .divisions{
+        display:flex; justify-content:space-between; margin-top:36px;
+      }
+      .divisions > li{
+        margin-top:0!important;
+      }
+      .assistant-director,
+      .joint-director,
+      .diet,
+      .deo-office{
+        width:calc(50% - 10px); box-sizing:border-box;
+      }
+      .section-a,
+      .section-b,
+      .section-c,
+      .section-d{
+        width:calc(50% - 10px); box-sizing:border-box;
+      }
+      .diet li,
+      .deo-office li{
+        margin-top:36px;
+      }
+    }
+    @media (max-width:767px){
+      .hierarchy li + li{
+        margin-top:36px;
+      }
+      .section-a li,
+      .section-b li,
+      .section-c li,
+      .section-d li{
+        margin-top:0!important;
+      }
+      .hierarchy > li + li:before,
+      .diet li:before,
+      .deo-office li:before{
+        bottom:100%; transform:rotate(90deg);
+      }
+      .divisions{
+        padding-left:45px; margin-top:36px;
+      }
+      .divisions > li:before{
+        right:100%;
+      }
+      .divisions > li:after{
+        content:""; position:absolute; width:2px; top:-26px; bottom:0; left:-28px; background-color:#666;
+      }
+      .divisions > li:last-child:after{
+        bottom:auto; height:55px; top:-36px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="container">
+    <div class="logos">
+      <div class="logo">
+        <a href="index.html">
+          <div class="animating-logos">
+            <img src="images/telangana-open-school-society-logo.png" alt="" />
+            <img src="images/govt-of-telangana-logo.png" alt="" />
+            <img src="images/telangana-open-school-society-logo.png" alt="" />
+          </div>
+          <span class="wordmark"><span class="screen-reader-text">Telangana Open School Society</span></span>
+        </a>
+      </div>
+      <div class="tg-logo">
+        <img src="images/govt-of-telangana-logo.png" alt="Government of Telangana" />
+      </div>
+    </div>
+    <nav>
+      <button type="button" aria-controls="primary-menu" aria-expanded="false" class="toggle-menu">Menu</button>
+      <ul id="primary-menu" class="primary-menu">
+        <li class="level-1"><a href="index.html" class="level-1-a">Home</a></li>
+        <li class="level-1 has-sub">
+          <a href="profile-objectives-mandate.html" class="level-1-a kbd-hide">About Us</a>
+          <button type="button" aria-controls="about-us-submenu" aria-expanded="false" class="level-1-a kbd-show">About Us</button>
+          <ul id="about-us-submenu" class="submenu">
+            <li class="level-2"><a href="profile-objectives-mandate.html" class="level-2-a">Profile, Objectives and Mandate</a></li>
+            <li class="level-2"><a href="organogram.html" class="level-2-a">Organogram of Telangana Open School Society</a></li>
+            <li class="level-2"><a href="list-of-hods.html" class="level-2-a">List of HODs</a></li>
+            <li class="level-2"><a href="state-and-district-hierarchies.html" class="level-2-a">State and District Hierarchies</a></li>
+          </ul>
+        </li>
+        <li class="level-1 has-sub">
+          <a href="ssc-scheme.html" class="level-1-a kbd-hide">Schemes and Services</a>
+          <button type="button" aria-controls="administration-submenu" aria-expanded="false" class="level-1-a kbd-show">Schemes and Services</button>
+          <ul id="administration-submenu" class="submenu">
+            <li class="level-2"><a href="ssc-scheme.html" class="level-2-a">SSC</a></li>
+            <li class="level-2"><a href="intermediate-scheme.html" class="level-2-a">Intermediate</a></li>
+            <li class="level-2"><a href="citizen-charter.html" class="level-2-a">Citizen Charter</a></li>
+          </ul>
+        </li>
+        <li class="level-1"><a href="achievements.html" class="level-1-a">Achievements</a></li>
+        <li class="level-1"><a href="news-and-media.html" class="level-1-a">News and Media</a></li>
+        <li class="level-1"><a href="gallery.html" class="level-1-a">Gallery</a></li>
+        <li class="level-1"><a href="contact-us.html" class="level-1-a">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    <section class="main-section">
+      <h1 class="main-h1">State and District Hierarchies</h1>
+      <section>
+        <h2>State Level</h2>
+        <ol class="hierarchy">
+          <li class="chairman">
+            <span class="level-name card">Chairman of Executive Board (EB) (Chief Secretary to Government, Telangana)</span>
+          </li>
+          <li class="vice-chairman">
+            <span class="level-name card">Vice-Chairman Principal Secretary to Government Concerned Education Department, Telangana</span>
+          </li>
+          <li class="director">
+            <span class="level-name card">Director, Telangana Open School Society – Member Secretary</span>
+            <ul class="divisions">
+              <li class="assistant-director">
+                <span class="level-name card">Assistant Director</span>
+                <ul class="divisions">
+                  <li class="section-a card">
+                    <span class="heading">Section A</span>
+                    <ul>
+                      <li>Budget</li>
+                      <li>Accounts</li>
+                      <li>Audit</li>
+                    </ul>
+                  </li>
+                  <li class="section-b card">
+                    <span class="heading">Section B</span>
+                    <ul>
+                      <li>Establishment</li>
+                      <li>Equivalency</li>
+                      <li>Accreditation</li>
+                      <li>Monitoring</li>
+                      <li>Academic</li>
+                      <li>Student Support Services</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="joint-director">
+                <span class="level-name card">Joint Director</span>
+                <ul class="divisions">
+                  <li class="section-c card">
+                    <span class="heading">Section C</span>
+                    <ul>
+                      <li>SSC Examinations</li>
+                      <li>Citizen Charter</li>
+                    </ul>
+                  </li>
+                  <li class="section-d card">
+                    <span class="heading">Section D</span>
+                    <ul>
+                      <li>Intermediate Examinations</li>
+                      <li>Citizen Charter</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+      <section>
+        <h2>District Level</h2>
+        <ol class="hierarchy">
+          <li class="chairman">
+            <span class="level-name card">District Magistrate and Collector/Chairman of the Executive Board</span>
+          </li>
+          <li>
+            <span class="level-name card">District Educational Officer/Member Secretary</span>
+            <ul class="divisions">
+              <li class="diet">
+                <ol>
+                  <li><span class="level-name card">DIET (District Resource Centre)</span></li>
+                  <li class="supporting-staff"><span class="level-name card">Supporting Staff: <span>Lecturers</span></span></li>
+                  <li><span class="level-name card">Functions</span></li>
+                  <li class="functions card">
+                    <ul>
+                      <li>Survey and Identification of Client Groups</li>
+                      <li>Enrolment Drive</li>
+                      <li>Monitoring of Personal Contact Programme</li>
+                  </li>
+                </ol>
+              </li>
+              <li class="deo-office">
+                <ol>
+                  <li><span class="level-name card">D.E.O office</span></li>
+                  <li class="supporting-staff"><span class="level-name card">Supporting Staff: <span>Dy. Educational Officers & Mandal Educational Officers</span></span></li>
+                  <li><span class="level-name card">Functions</span></li>
+                  <li class="functions card">Administration
+                    <ul>
+                      <li>Identification of Accreditation Institutions (AIs) (Government/ZP/Aided/Private recognized institutions)</li>
+                      <li>Release of Grants to AIs</li>
+                      <li>Monitoring of PCPs</li>
+                      <li>Conduct of Examinations and Spot Valuation</li>
+                      <li>Proper Maintenance of Accounts</li>
+                    </ul>
+                  </li>
+                </ol>
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+    </section>
+    <aside class="related-links card">
+      <h1>About Us</h1>
+      <ul>
+        <li><a href="profile-objectives-mandate.html">Profile, Objectives and Mandate</a></li>
+        <li><a href="organogram.html">Organogram of Telangana Open School Society</a></li>
+        <li><a href="list-of-hods.html">List of HODs</a></li>
+        <li><a href="state-and-district-hierarchies.html">State and District Hierarchies</a></li>
+      </ul>
+    </aside>
+  </main>
+  <footer class="container">
+    <section class="sitemap">
+      <ul>
+        <li class="level-1 has-sub">
+          <h1>About Us</h1>
+          <ul class="submenu">
+            <li class="level-2"><a href="profile-objectives-mandate.html" class="level-2-a">Profile, Objectives and Mandate</a></li>
+            <li class="level-2"><a href="organogram.html" class="level-2-a">Organogram</a></li>
+            <li class="level-2"><a href="list-of-hods.html" class="level-2-a">List of HODs</a></li>
+            <li class="level-2"><a href="state-and-district-hierarchies.html" class="level-2-a">State and District Hierarchies</a></li>
+          </ul>
+        </li>
+        <li class="level-1 has-sub">
+          <h1>Schemes and Services</h1>
+          <ul class="submenu">
+            <li class="level-2"><a href="ssc-scheme.html" class="level-2-a">SSC</a></li>
+            <li class="level-2"><a href="intermediate-scheme.html" class="level-2-a">Intermediate</a></li>
+            <li class="level-2"><a href="citizen-charter.html" class="level-2-a">Citizen Charter</a></li>
+          </ul>
+        </li>
+        <li class="level-1"><a href="achievements.html" class="level-1-a">Achievements</a></li>
+        <li class="level-1"><a href="news-and-media.html" class="level-1-a">News and Media</a></li>
+        <li class="level-1"><a href="gallery.html" class="level-1-a">Gallery</a></li>
+        <li class="level-1"><a href="contact-us.html" class="level-1-a">Contact Us</a></li>
+      </ul>
+    </section>
+    <section class="contact-us">
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d565.9561165141238!2d78.47336224522314!3d17.398164903291743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb976221a66833%3A0xe2381e99c4681084!2sSCERT+B+Block%2C+SCERT+Rd%2C+Fateh+Maidan%2C+Abids%2C+Hyderabad%2C+Telangana+500001!5e0!3m2!1sen!2sin!4v1545498912872" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+    </section>
+    <section class="copyright">
+      <p>&copy; Copyright 2018, Telangana Open School Society. All rights reserved.</p>
+      <ul>
+        <li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      </ul>
+    </section>
+  </footer>
+  <script src="js/toss.js" defer></script>
+</body>
+</html>
