@@ -17,14 +17,14 @@
       margin:0; padding:0; font-variant-caps:unset; border-bottom:none; background:transparent;
     }
     .card h2 button{
-      border:none; padding:16px 32px 12px; background-color:transparent; width:100%; text-align:left; color:inherit; position:relative; font-family:Roboto, sans-serif; font-weight:700; font-size:16px;
+      border:none; padding:16px 48px 12px 32px; background-color:transparent; width:100%; text-align:left; color:inherit; position:relative; font-family:Roboto, sans-serif; font-weight:700; font-size:16px;
     }
     .card h2 button:hover,
     .card h2 button:focus{
       background-color:#f1f1f1;
     }
     .card h2 button:after{
-      content:""; position:absolute; top:14px; right:28px; width:24px; height:24px;
+      content:""; width:24px; height:24px; position:absolute; top:50%; right:16px; transform:translateY(-50%);
     }
     .card h2 button[aria-expanded="false"]:after{
       background-image:url('images/plus.svg');
