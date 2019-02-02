@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Template</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700|Rubik:700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/vow0fff.css">
+  <style>
+    i{
+	    font-variant-caps:all-petite-caps; font-style:normal;
+    }
+    table{
+      border-collapse:collapse; width:calc(100% + 40px); font-variant-numeric:lining-nums; margin-left:-40px;
+    }
+    tr + tr{
+      border-top:1px solid #dfdfdf;
+    }
+    th{
+      background-color:#f1f1f1; font-weight:500; font-size:15px; line-height:20px;
+    }
+    tbody{
+      border-top:1px solid #dfdfdf;
+    }
+    tbody th{
+      white-space:nowrap; background:none;
+    }
+    th,td{
+      padding:8px 24px; text-align:right;
+    }
+    td{
+      vertical-align:top; white-space:nowrap;
+    }
+    @media (max-width:830px){
+      th,td{
+        padding:8px 20px;
+      }
+      th:first-child{
+        padding-right:0;
+      }
+      th:nth-child(2),
+      td:nth-child(2){
+        padding-left:0;
+      }
+    }
+    @media (max-width:768px){
+      th,td{
+        padding:8px 16px;
+      }
+    }
+    .subject-group{
+      margin:1rem 0;
+    }
+    .subject-group dl{
+      margin:0;
+    }
+    .subject-group dt,
+    .subject-group dd{
+      
+    }
+    .subject-group dt{
+      font-feature-settings:"tnum" on; float:left; font-weight:500; padding-left:20px;
+    }
+    .subject-group dd{
+      margin-left:0; padding-left:60px; padding-right:20px; box-shadow:0px 1px 0px #dfdfdf;
+    }
+    @media (min-width:768px){
+      .classification-wrapper{
+        display:flex; grid-gap:20px;
+      }
+      .classification-wrapper section{
+        flex:1 1;
+      }
+    }
+    .classification-wrapper section h3{
+	    padding:8px 32px; margin:0; background:#f6f6f6; font-weight:500; border-bottom:1px solid #ddd; font-size:19px;
+    }
+    
+    .combinations{
+      margin-left:-40px;
+    }
+    .combinations > dt{
+	    text-transform:uppercase; font-weight:700;
+    }
+    .combinations > dd + dt{
+	    margin-top:16px; padding-top:16px; border-top:1px solid;
+    }
+    .combinations dd{
+      margin-left:0; font-feature-settings:"onum" off;
+    }
+    .combination{
+      display:flex; flex-wrap:wrap; align-items:center;
+    }
+    .combination dd,
+    .combination dt{
+      width:50%; padding-top:5px; padding-bottom:5px;
+    }
+    .combination dt{
+      width:210px; padding-right:24px;
+    }
+    .combination dd{
+      width:calc(100% - 234px);
+    }
+    .combination dd:last-of-type,
+    .combination dt:last-of-type{
+      font-weight:500;
+    }
+    
+    @media (min-width:540px){
+      .combinations{
+        display:none;
+      }
+    }
+    @media (max-width:539px){
+      table{
+        display:none;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logos container">
+      <div class="logo">
+        <a href="index.html">
+          <div class="animating-logos">
+            <img src="images/telangana-open-school-society-logo.png" alt="" />
+            <img src="images/govt-of-telangana-logo.png" alt="" />
+            <img src="images/telangana-open-school-society-logo.png" alt="" />
+          </div>
+          <span class="wordmark"><span class="screen-reader-text">Telangana Open School Society</span></span>
+        </a>
+      </div>
+      <div class="tg-logo">
+        <img src="images/govt-of-telangana-logo.png" alt="Government of Telangana" />
+      </div>
+    </div>
+    <nav>
+      <button type="button" aria-controls="primary-menu-wrapper" aria-expanded="false" class="show-menu">Menu</button>
+      <div class="primary-menu-mask"></div>
+      <div class="primary-menu-wrapper container" id="primary-menu-wrapper">
+        <button type="button" aria-controls="primary-menu-wrapper" class="hide-menu">Hide Menu</button>
+        <ul id="primary-menu" class="primary-menu">
+          <li class="level-1"><a href="index.html" class="level-1-a">Home</a></li>
+          <li class="level-1 has-sub">
+            <a href="profile-objectives-mandate.html" class="level-1-a kbd-hide">About Us</a>
+            <button type="button" aria-controls="about-us-submenu" aria-expanded="false" class="level-1-a kbd-show">About Us</button>
+            <ul id="about-us-submenu" class="submenu">
+              <li class="level-2"><a href="profile-objectives-mandate.html" class="level-2-a">Profile, Objectives and Mandate</a></li>
+              <li class="level-2"><a href="organogram.html" class="level-2-a">Organogram of Telangana Open School Society</a></li>
+              <li class="level-2"><a href="list-of-hods.html" class="level-2-a">List of HODs</a></li>
+              <li class="level-2"><a href="state-and-district-hierarchies.html" class="level-2-a">State and District Hierarchies</a></li>
+            </ul>
+          </li>
+          <li class="level-1 has-sub">
+            <a href="ssc-scheme.html" class="level-1-a kbd-hide">Schemes and Services</a>
+            <button type="button" aria-controls="administration-submenu" aria-expanded="false" class="level-1-a kbd-show">Schemes and Services</button>
+            <ul id="administration-submenu" class="submenu">
+              <li class="level-2"><a href="ssc-scheme.html" class="level-2-a">SSC</a></li>
+              <li class="level-2"><a href="intermediate-scheme.html" class="level-2-a">Intermediate</a></li>
+              <li class="level-2"><a href="citizen-charter.html" class="level-2-a">Citizen Charter</a></li>
+            </ul>
+          </li>
+          <li class="level-1"><a href="achievements.html" class="level-1-a">Achievements</a></li>
+          <li class="level-1"><a href="news-and-media.html" class="level-1-a">News and Media</a></li>
+          <li class="level-1"><a href="gallery.html" class="level-1-a">Gallery</a></li>
+          <li class="level-1"><a href="contact-us.html" class="level-1-a">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="container">
+    <section class="main-section">
+      <h1 class="main-h1">SSC Scheme of Studies</h1>
+      <p>The Scheme of Studies for Secondary Course is shown in <i>Figure 1</i> below this section. To obtain the <abbr title="Secondary School Certificate">SSC</abbr> pass certificate, the candidate is required to pass in a <em>minimum of five subjects</em> including one or a maximum of two languages from <i>Group A</i> and a minimum two subjects from <i>Group B</i>. The candidate can opt for one vocational subject, from <i>Group C</i>, totaling the number of subjects to five. If the candidate does not wish to opt for a vocational subject from <i>Group C</i>, they can take a fifth subject either from <i>Group A</i> (limited to 2 subjects) or from <i>Group B</i> (3 or 4 subjects) totaling to five subjects. However, the candidate is free to take one additional subject (sixth). Thus, in all the candidate can choose a maximum of six subjects. Please go through carefully Section1.1 above in respect to choice of subjects.</p>
+      <p>To simplify further, the choice of subjects can be done as follows. </p>
+      <ol>
+        <li>
+          <p>For 5 subjects, the combinations can be</p>
+          <table class="card">
+            <thead>
+              <tr>
+                <th role="presentation"></th>
+                <th scope="col">No. of subjects from Group A</th>
+                <th scope="col">No. of subjects from Group B</th>
+                <th scope="col">No. of subjects from Group C</th>
+                <th scope="col">Total no. of subjects</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Combination 1</th>
+                <td>1</td>
+                <td>4</td>
+                <td>0</td>
+                <td>1 + 4 + 0 = 5</td>
+              </tr>
+              <tr>
+                <th scope="row">Combination 2</th>
+                <td>2</td>
+                <td>3</td>
+                <td>0</td>
+                <td>2 + 3 + 0 = 5</td>
+              </tr>
+              <tr>
+                <th scope="row">Combination 3</th>
+                <td>2</td>
+                <td>2</td>
+                <td>1</td>
+                <td>2 + 2 + 1 = 5</td>
+              </tr>
+              <tr>
+                <th scope="row">Combination 4</th>
+                <td>1</td>
+                <td>3</td>
+                <td>1</td>
+                <td>1 + 3 + 1 = 5</td>
+              </tr>
+            </tbody>
+          </table>
+          <dl class="combinations">
+            <dt>Combination 1</dt>
+            <dd>
+              <dl class="combination">
+                <dt>No. of subjects from Group A</dt>
+                <dd>1</dd>
+                <dt>No. of subjects from Group B</dt>
+                <dd>4</dd>
+                <dt>No. of subjects from Group C</dt>
+                <dd>0</dd>
+                <dt>Total no. of subjects</dt>
+                <dd>5</dd>
+              </dl>
+            </dd>
+            <dt>Combination 2</dt>
+            <dd>
+              <dl class="combination">
+                <dt>No. of subjects from Group A</dt>
+                <dd>2</dd>
+                <dt>No. of subjects from Group B</dt>
+                <dd>3</dd>
+                <dt>No. of subjects from Group C</dt>
+                <dd>0</dd>
+                <dt>Total no. of subjects</dt>
+                <dd>5</dd>
+              </dl>
+            </dd>
+            <dt>Combination 3</dt>
+            <dd>
+              <dl class="combination">
+                <dt>No. of subjects from Group A</dt>
+                <dd>2</dd>
+                <dt>No. of subjects from Group B</dt>
+                <dd>2</dd>
+                <dt>No. of subjects from Group C</dt>
+                <dd>1</dd>
+                <dt>Total no. of subjects</dt>
+                <dd>5</dd>
+              </dl>
+            </dd>
+            <dt>Combination 4</dt>
+            <dd>
+              <dl class="combination">
+                <dt>No. of subjects from Group A</dt>
+                <dd>1</dd>
+                <dt>No. of subjects from Group B</dt>
+                <dd>3</dd>
+                <dt>No. of subjects from Group C</dt>
+                <dd>1</dd>
+                <dt>Total no. of subjects</dt>
+                <dd>5</dd>
+              </dl>
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <p>For 6 subjects, the combinations can be</p>
+          <table class="card">
+            <thead>
+              <tr>
+                <th role="presentation"></th>
+                <th scope="col">No. of subjects from Group A</th>
+                <th scope="col">No. of subjects from Group B</th>
+                <th scope="col">No. of subjects from Group C</th>
+                <th scope="col">Total no. of subjects</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Combination 1</th>
+                <td>1</td>
+                <td>5</td>
+                <td>0</td>
+                <td>1 + 5 + 0 = 6</td>
+              </tr>
+              <tr>
+                <th scope="row">Combination 2</th>
+                <td>1</td>
+                <td>4</td>
+                <td>1</td>
+                <td>1 + 4 + 1 = 6</td>
+              </tr>
+              <tr>
+                <th scope="row">Combination 3</th>
+                <td>2</td>
+                <td>4</td>
+                <td>0</td>
+                <td>2 + 4 + 0 = 6</td>
+              </tr>
+              <tr>
+                <th scope="row">Combination 4</th>
+                <td>2</td>
+                <td>3</td>
+                <td>1</td>
+                <td>2 + 3 + 1 = 6</td>
+              </tr>
+              <tr>
+                <th scope="row">Combination 5</th>
+                <td>3</td>
+                <td>3</td>
+                <td>0</td>
+                <td>3 + 3 + 0 = 6</td>
+              </tr>
+              <tr>
+                <th scope="row">Combination 6</th>
+                <td>3</td>
+                <td>2</td>
+                <td>1</td>
+                <td>3 + 2 + 1 = 6</td>
+              </tr>
+            </tbody>
+          </table>
+          <dl class="combinations">
+            <dt>Combination 1</dt>
+            <dd>
+              <dl class="combination">
+                <dt>No. of subjects from Group A</dt>
+                <dd>1</dd>
+                <dt>No. of subjects from Group B</dt>
+                <dd>5</dd>
+                <dt>No. of subjects from Group C</dt>
+                <dd>0</dd>
+                <dt>Total no. of subjects</dt>
+                <dd>6</dd>
+              </dl>
+            </dd>
+            <dt>Combination 2</dt>
+            <dd>
+              <dl class="combination">
+                <dt>No. of subjects from Group A</dt>
+                <dd>1</dd>
+                <dt>No. of subjects from Group B</dt>
+                <dd>4</dd>
+                <dt>No. of subjects from Group C</dt>
+                <dd>1</dd>
+                <dt>Total no. of subjects</dt>
+                <dd>6</dd>
+              </dl>
+            </dd>
+            <dt>Combination 3</dt>
+            <dd>
+              <dl class="combination">
+                <dt>No. of subjects from Group A</dt>
+                <dd>2</dd>
+                <dt>No. of subjects from Group B</dt>
+                <dd>4</dd>
+                <dt>No. of subjects from Group C</dt>
+                <dd>0</dd>
+                <dt>Total no. of subjects</dt>
+                <dd>6</dd>
+              </dl>
+            </dd>
+            <dt>Combination 4</dt>
+            <dd>
+              <dl class="combination">
+                <dt>No. of subjects from Group A</dt>
+                <dd>2</dd>
+                <dt>No. of subjects from Group B</dt>
+                <dd>3</dd>
+                <dt>No. of subjects from Group C</dt>
+                <dd>1</dd>
+                <dt>Total no. of subjects</dt>
+                <dd>6</dd>
+              </dl>
+            </dd>
+            <dt>Combination 5</dt>
+            <dd>
+              <dl class="combination">
+                <dt>No. of subjects from Group A</dt>
+                <dd>3</dd>
+                <dt>No. of subjects from Group B</dt>
+                <dd>3</dd>
+                <dt>No. of subjects from Group C</dt>
+                <dd>0</dd>
+                <dt>Total no. of subjects</dt>
+                <dd>6</dd>
+              </dl>
+            </dd>
+            <dt>Combination 6</dt>
+            <dd>
+              <dl class="combination">
+                <dt>No. of subjects from Group A</dt>
+                <dd>3</dd>
+                <dt>No. of subjects from Group B</dt>
+                <dd>2</dd>
+                <dt>No. of subjects from Group C</dt>
+                <dd>1</dd>
+                <dt>Total no. of subjects</dt>
+                <dd>6</dd>
+              </dl>
+            </dd>
+          </dl>
+        </li>
+      </ol>
+      <section>
+        <h2>SSC Scheme of Studies for Academic and Vocational Courses</h2>
+        <p>Classification of Subjects</p>
+        <div class="classification-wrapper">
+          <section class="card subject-group">
+            <h3>Group A</h3>
+            <dl>
+              <dt>201</dt>
+              <dd>Hindi</dd>
+              <dt>202</dt>
+              <dd>English</dd>
+              <dt>204</dt>
+              <dd>Marathi</dd>
+              <dt>205</dt>
+              <dd>Telugu</dd>
+              <dt>206</dt>
+              <dd>Urdu</dd>
+              <dt>208</dt>
+              <dd>Kannada</dd>
+              <dt>233</dt>
+              <dd>Oriya</dd>
+              <dt>237</dt>
+              <dd>Tamil</dd>
+            </dl>
+          </section>
+          <section class="card subject-group">
+            <h3>Group B</h3>
+            <dl>
+              <dt>211</dt>
+              <dd>Mathematics</dd>
+              <dt>212</dt>
+              <dd>Science & Technology</dd>
+              <dt>213</dt>
+              <dd>Social Studies</dd>
+              <dt>214</dt>
+              <dd>Economics</dd>
+              <dt>215</dt>
+              <dd>Business Studies</dd>
+              <dt>216</dt>
+              <dd>Home Science</dd>
+              <dt>222</dt>
+              <dd>Psychology</dd>
+              <dt>223</dt>
+              <dd>Indian Culture & Heritage</dd>
+            </dl>
+          </section>
+          <section class="card subject-group">
+            <h3>Group C</h3>
+            <dl>
+              <dt>822</dt>
+              <dd>Tailoring, Designing &amp; Dress Making</dd>
+              <dt>841</dt>
+              <dd>Cell Phone Mechanism</dd>
+              <dt>842</dt>
+              <dd>Electrician and house wiring</dd>
+              <dt>844</dt>
+              <dd>Welding</dd>
+              <dt>845</dt>
+              <dd>Masonry</dd>
+              <dt>846</dt>
+              <dd>Carpentry</dd>
+              <dt>851</dt>
+              <dd>Computer Course</dd>
+              <dt>853</dt>
+              <dd>Pre-School Teacher Training</dd>
+              <dt>863</dt>
+              <dd>Automobile Mechanism</dd>
+              <dt>870</dt>
+              <dd>Beautician &amp; Health Care</dd>
+            </dl>
+          </section>
+        </div>
+      </section>
+    </section>
+    <aside class="related-links card">
+      <div>
+        <h1>Schemes and Services</h1>
+        <ul>
+          <li><a href="ssc-scheme.html">SSC</a></li>
+          <li><a href="intermediate-scheme.html">Intermediate</a></li>
+          <li><a href="citizen-charter.html">Citizen Charter</a></li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+  <footer>
+    <div class="container">
+      <section class="contact-ctas">
+        <div class="tel">
+          <a href="tel:+9140-23299568">
+            <span>Office Phone Number :</span>
+            <span>+9140 2329 9568</span>
+          </a>
+        </div>
+        <div class="email">
+          <a href="mailto:dirtoshyd@gmail.com">
+            <span>E-mail ID :</span>
+            <span>dirtoshyd@gmail.com</span>
+          </a>
+        </div>
+      </section>
+      <section class="sitemap">
+        <ul>
+          <li class="level-1 has-sub">
+            <h1>About Us</h1>
+            <ul class="submenu">
+              <li class="level-2"><a href="profile-objectives-mandate.html" class="level-2-a">Profile, Objectives and Mandate</a></li>
+              <li class="level-2"><a href="organogram.html" class="level-2-a">Organogram</a></li>
+              <li class="level-2"><a href="list-of-hods.html" class="level-2-a">List of HODs</a></li>
+              <li class="level-2"><a href="state-and-district-hierarchies.html" class="level-2-a">State and District Hierarchies</a></li>
+            </ul>
+          </li>
+          <li class="level-1 has-sub">
+            <h1>Schemes and Services</h1>
+            <ul class="submenu">
+              <li class="level-2"><a href="ssc-scheme.html" class="level-2-a">SSC</a></li>
+              <li class="level-2"><a href="intermediate-scheme.html" class="level-2-a">Intermediate</a></li>
+              <li class="level-2"><a href="citizen-charter.html" class="level-2-a">Citizen Charter</a></li>
+            </ul>
+          </li>
+          <li class="level-1"><a href="achievements.html" class="level-1-a">Achievements</a></li>
+          <li class="level-1"><a href="news-and-media.html" class="level-1-a">News and Media</a></li>
+          <li class="level-1"><a href="gallery.html" class="level-1-a">Gallery</a></li>
+          <li class="level-1"><a href="contact-us.html" class="level-1-a">Contact Us</a></li>
+        </ul>
+      </section>
+      <section class="view-in-map">
+        <p><a href="contact-us.html#map">View location in the map</a></p>
+      </section>
+      <section class="copyright">
+        <p>&copy; Copyright 2018, Telangana Open School Society. All rights reserved.</p>
+        <ul>
+          <li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+      </section>
+    </div>
+  </footer>
+  <script src="js/toss.js" defer></script>
+</body>
+</html>

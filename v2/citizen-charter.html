@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Template</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700|Rubik:700" rel="stylesheet">
+  <style>
+    .expandable.card{
+      padding-bottom:0; margin:1rem 0;
+    }
+    .expandable.card:nth-of-type(2n+3) {
+	    margin-top: 4rem;
+    }
+    .card h2{
+      margin:0; padding:0; font-variant-caps:unset; border-bottom:none; background:transparent;
+    }
+    .card h2 button{
+      border:none; padding:12px 48px 12px 32px; background-color:transparent; width:100%; text-align:left; color:inherit; position:relative; font-family:Roboto, sans-serif; font-size:16px;
+    }
+    .card h2 button:hover,
+    .card h2 button:focus{
+      background-color:#f1f1f1;
+    }
+    .card h2 button:after{
+      content:""; width:24px; height:24px; position:absolute; top:50%; right:16px; transform:translateY(-50%);
+    }
+    .card h2 button[aria-expanded="false"]:after{
+      background-image:url('images/plus.svg');
+    }
+    .card h2 button[aria-expanded="true"]:after{
+      background-image:url('images/close.svg');
+    }
+    .details{
+      padding:0 32px; display:none;
+    }
+    .expanded .details{
+      display:block; padding:16px 16px 12px; height:auto; overflow:initial; animation:pad .2s ease;
+    }
+    @media (max-width:500px){
+      .card h2 button{
+        padding-left:16px;
+      }
+    }
+    @keyframes pad{
+      from{padding-top:0; padding-bottom:0;}
+      to{padding-top:16px; padding-bottom:12px;}
+    }
+    .collapsing .details{
+      padding-top:0; padding-bottom:0; transition:padding .2s ease;
+    }
+    .details p{
+      margin:1rem 0;
+    }
+    .details ul{
+      padding-left:24px;
+    }
+    .details .fee{
+	    float: left;
+	    margin: 0 72px 0 0;
+    }
+    table{
+      border-collapse:collapse; display:none;
+    }
+    th{
+      background-color:#c69a47; color:#fff;
+    }
+    th,td{
+      padding:8px; border:1px solid #a27c32;
+    }
+    td{
+      vertical-align:top;
+    }
+    table ul{
+      list-style:none; padding:20px; margin:0;
+    }
+  </style>
+  <noscript>
+    <style>
+      .card h2{
+        padding:16px 32px 12px;
+      }
+      .details{
+        display:block; height:auto; overflow:initial; padding:16px 32px 12px;
+      }
+    </style>
+  </noscript>
+</head>
+<body>
+  <header>
+    <div class="logos container">
+      <div class="logo">
+        <a href="index.html">
+          <div class="animating-logos">
+            <img src="images/telangana-open-school-society-logo.png" alt="" />
+            <img src="images/govt-of-telangana-logo.png" alt="" />
+            <img src="images/telangana-open-school-society-logo.png" alt="" />
+          </div>
+          <span class="wordmark"><span class="screen-reader-text">Telangana Open School Society</span></span>
+        </a>
+      </div>
+      <div class="tg-logo">
+        <img src="images/govt-of-telangana-logo.png" alt="Government of Telangana" />
+      </div>
+    </div>
+    <nav>
+      <button type="button" aria-controls="primary-menu-wrapper" aria-expanded="false" class="show-menu">Menu</button>
+      <div class="primary-menu-mask"></div>
+      <div class="primary-menu-wrapper container" id="primary-menu-wrapper">
+        <button type="button" aria-controls="primary-menu-wrapper" class="hide-menu">Hide Menu</button>
+        <ul id="primary-menu" class="primary-menu">
+          <li class="level-1"><a href="index.html" class="level-1-a">Home</a></li>
+          <li class="level-1 has-sub">
+            <a href="profile-objectives-mandate.html" class="level-1-a kbd-hide">About Us</a>
+            <button type="button" aria-controls="about-us-submenu" aria-expanded="false" class="level-1-a kbd-show">About Us</button>
+            <ul id="about-us-submenu" class="submenu">
+              <li class="level-2"><a href="profile-objectives-mandate.html" class="level-2-a">Profile, Objectives and Mandate</a></li>
+              <li class="level-2"><a href="organogram.html" class="level-2-a">Organogram of Telangana Open School Society</a></li>
+              <li class="level-2"><a href="list-of-hods.html" class="level-2-a">List of HODs</a></li>
+              <li class="level-2"><a href="state-and-district-hierarchies.html" class="level-2-a">State and District Hierarchies</a></li>
+            </ul>
+          </li>
+          <li class="level-1 has-sub">
+            <a href="ssc-scheme.html" class="level-1-a kbd-hide">Schemes and Services</a>
+            <button type="button" aria-controls="administration-submenu" aria-expanded="false" class="level-1-a kbd-show">Schemes and Services</button>
+            <ul id="administration-submenu" class="submenu">
+              <li class="level-2"><a href="ssc-scheme.html" class="level-2-a">SSC</a></li>
+              <li class="level-2"><a href="intermediate-scheme.html" class="level-2-a">Intermediate</a></li>
+              <li class="level-2"><a href="citizen-charter.html" class="level-2-a">Citizen Charter</a></li>
+            </ul>
+          </li>
+          <li class="level-1"><a href="achievements.html" class="level-1-a">Achievements</a></li>
+          <li class="level-1"><a href="news-and-media.html" class="level-1-a">News and Media</a></li>
+          <li class="level-1"><a href="gallery.html" class="level-1-a">Gallery</a></li>
+          <li class="level-1"><a href="contact-us.html" class="level-1-a">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="container">
+    <section class="main-section">
+      <h1 class="main-h1">Citizen Charter</h1>
+      <section class="expandable card">
+        <h2>Duplicate Memo of Marks - SSC</h2>
+        <div class="details">
+          <p class="mt0">The following documents are required:</p>
+          <ul class="required-documents">
+            <li>Filled in application form through AI Coordinator</li>
+            <li>Prescribed fee through DD</li>
+          </ul>
+          <p class="fee"><strong>Fee:</strong> Rs.100/-</p>
+          <p class="time-frame"><strong>Time frame:</strong> 07 working days</dd>
+          <p class="accountable-officer"><strong>Officer to be contacted for delay or default in service:</strong> The Joint Director</dd>
+        </div>
+      </section>
+      <section class="expandable card">
+        <h2>Duplicate Memo of Marks - Intermediate</h2>
+        <div class="details">
+          <p class="mt0">The following documents are required:</p>
+          <ul class="required-documents">
+            <li>Filled in application form through AI Coordinator</li>
+            <li>Prescribed fee through DD</li>
+          </ul>
+          <p class="fee"><strong>Fee:</strong> Rs.200/-</p>
+          <p class="time-frame"><strong>Time frame:</strong> 07 working days</dd>
+          <p class="accountable-officer"><strong>Officer to be contacted for delay or default in service:</strong> The Joint Director</dd>
+        </div>
+      </section>
+      <section class="expandable card">
+        <h2>Duplicate Pass Certificate - SSC</h2>
+        <div class="details">
+          <p class="mt0">The following documents are required:</p>
+          <ul>
+            <li>Filled in application form forwarded through the  AI Coordinator with photo attestation</li>
+            <li>Xerox copy of pass certificate</li>
+            <li>Police enquiry certificate (non availability)</li>
+            <li>Affidavit (Rs.50/-) signed by Notary/1<sup>st</sup> Class Magistrate</li>
+            <li>DD for Rs.250/-</li>
+          </ul>
+          <p class="fee"><strong>Fee:</strong> Rs.250/-</p>
+          <p class="time-frame"><strong>Time frame:</strong> 10 working days</dd>
+          <p class="accountable-officer"><strong>Officer to be contacted for delay or default in service:</strong> The Joint Director</dd>
+        </div>
+      </section>
+      <section class="expandable card">
+        <h2>Duplicate Pass Certificate - Intermediate</h2>
+        <div class="details">
+          <p class="mt0">The following documents are required:</p>
+          <ul>
+            <li>Filled in application form forwarded through the  AI Coordinator with photo attestation</li>
+            <li>Xerox copy of pass certificate</li>
+            <li>Police enquiry certificate (non availability)</li>
+            <li>Affidavit (Rs.100/-) signed by Notary/1<sup>st</sup> Class Magistrate</li>
+            <li>DD for Rs.500/-</li>
+          </ul>
+          <p class="fee"><strong>Fee:</strong> Rs.500/-</p>
+          <p class="time-frame"><strong>Time frame:</strong> 10 working days</dd>
+          <p class="accountable-officer"><strong>Officer to be contacted for delay or default in service:</strong> The Joint Director</dd>
+        </div>
+      </section>
+      <section class="expandable card">
+        <h2>Correction in Pass certificate - SSC</h2>
+        <div class="details">
+          <p class="mt0">The following documents are required:</p>
+          <ul>
+            <li>Covering letter through the AI Coordinator</li>
+            <li>Original SSC pass certificate</li>
+            <li>Original TC cum Migration certificate</li>
+            <li>Original SSC Pass certificate</li>
+            <li>Xerox copy of admission application form attested by AI Coordinator</li>
+            <li>In case of Mothers name correction Ration Card/ Birth certificate</li>
+            <li>Original TC/ Record sheet</li>
+          </ul>
+          <p class="fee"><strong>Fee:</strong> -</p>
+          <p class="time-frame"><strong>Time frame:</strong> 07 working days</dd>
+          <p class="accountable-officer"><strong>Officer to be contacted for delay or default in service:</strong> The Joint Director</dd>
+        </div>
+      </section>
+      <section class="expandable card">
+        <h2>Correction in Pass certificate - Intermediate</h2>
+        <div class="details">
+          <p class="mt0">The following documents are required:</p>
+          <ul>
+            <li>Covering letter through the AI Coordinator</li>
+            <li>Original Intermediate certificate</li>
+            <li>Original TC cum Migration certificate</li>
+            <li>Original SSC Pass certificate</li>
+            <li>Xerox copy of admission application form attested by AI Coordinator</li>
+            <li>In case of Mothers name correction Ration Card/ Birth certificate</li>
+          </ul>
+          <p class="fee"><strong>Fee:</strong> -</p>
+          <p class="time-frame"><strong>Time frame:</strong> 10 working days</dd>
+          <p class="accountable-officer"><strong>Officer to be contacted for delay or default in service:</strong> The Joint Director</dd>
+        </div>
+      </section>
+      <section class="expandable card">
+        <h2>Genuineness of Pass Certificate - SSC</h2>
+        <div class="details">
+          <p class="mt0">The following documents are required:</p>
+          <ul>
+            <li>Original Intermediate pass certificate along with covering letter of the Department</li>
+            <li>No fee for the Government Sector</li>
+            <li>In case of private Sectors DD for Rs.100/-</li>
+          </ul>
+          <p class="fee"><strong>Fee:</strong> Rs.100/-</p>
+          <p class="time-frame"><strong>Time frame:</strong> 10 working days</dd>
+          <p class="accountable-officer"><strong>Officer to be contacted for delay or default in service:</strong> The Joint Director</dd>
+        </div>
+      </section>
+      <section class="expandable card">
+        <h2>Genuineness of Pass Certificate - Intermediate</h2>
+        <div class="details">
+          <p class="mt0">The following documents are required:</p>
+          <ul>
+            <li>Original Intermediate pass certificate along with covering letter of the Department</li>
+            <li>No fee for the Government Sector</li>
+            <li>In case of private Sectors DD for Rs.100/-</li>
+          </ul>
+          <p class="fee"><strong>Fee:</strong> Rs.100/-</p>
+          <p class="time-frame"><strong>Time frame:</strong> 10 working days</dd>
+          <p class="accountable-officer"><strong>Officer to be contacted for delay or default in service:</strong> The Joint Director</dd>
+        </div>
+      </section>
+      <section class="expandable card">
+        <h2>Recounting of marks in answer script - SSC</h2>
+        <div class="details">
+          <p class="mt0">The following documents are required:</p>
+          <ul>
+            <li>Rs.100/- fee per subject to be paid at MEE SEVA centres</li>
+          </ul>
+          <p class="fee"><strong>Fee:</strong> Rs.100/-</p>
+          <p class="time-frame"><strong>Time frame:</strong> 30 working days (after release of results)</dd>
+          <p class="accountable-officer"><strong>Officer to be contacted for delay or default in service:</strong> The Joint Director</dd>
+        </div>
+      </section>
+      <section class="expandable card">
+        <h2>Recounting of marks in answer script - Intermediate</h2>
+        <div class="details">
+          <p class="mt0">The following documents are required:</p>
+          <ul>
+            <li>Rs.200/- fee per subject to be paid at MEE SEVA centres</li>
+          </ul>
+          <p class="fee"><strong>Fee:</strong> Rs.200/-</p>
+          <p class="time-frame"><strong>Time frame:</strong> 30 working days (after release of results)</dd>
+          <p class="accountable-officer"><strong>Officer to be contacted for delay or default in service:</strong> The Joint Director</dd>
+        </div>
+      </section>
+      <section class="expandable card">
+        <h2>Withheld cases - SSC</h2>
+        <div class="details">
+          <p class="fee"><strong>Fee:</strong> Rs.100/-</p>
+          <p class="time-frame"><strong>Time frame:</strong> 30 working days (after release of results)</dd>
+          <p class="accountable-officer"><strong>Officer to be contacted for delay or default in service:</strong> The Joint Director</dd>
+        </div>
+      </section>
+      <section class="expandable card">
+        <h2>Withheld cases - Intermediate</h2>
+        <div class="details">
+          <p class="fee"><strong>Fee:</strong> Rs.100/-</p>
+          <p class="time-frame"><strong>Time frame:</strong> 30 working days (after release of results)</dd>
+          <p class="accountable-officer"><strong>Officer to be contacted for delay or default in service:</strong> The Joint Director</dd>
+        </div>
+      </section>
+      <section class="expandable card">
+        <h2>Duplicate T.Cs & Migration Certificates - SSC</h2>
+        <div class="details">
+          <p class="mt0">The following documents are required:</p>
+          <ul>
+            <li>Filled in application form forwarded through the  AI Coordinator with photo attestation</li>
+            <li>Police enquiry certificate</li>
+            <li>Affidavit (Rs.50/-) signed by Notary/1<sup>st</sup> Class Magistrate DD for Rs.100/-</li>
+          </ul>
+          <p class="fee"><strong>Fee:</strong> Rs.100/-</p>
+          <p class="time-frame"><strong>Time frame:</strong> 10 working days</dd>
+          <p class="accountable-officer"><strong>Officer to be contacted for delay or default in service:</strong> The Joint Director</dd>
+        </div>
+      </section>
+      <section class="expandable card">
+        <h2>Duplicate T.Cs & Migration Certificates - Intermediate</h2>
+        <div class="details">
+          <p class="mt0">The following documents are required:</p>
+          <ul>
+            <li>Filled in application form forwarded through the  AI Coordinator with photo attestation</li>
+            <li>Police enquiry certificate</li>
+            <li>Affidavit (Rs.100/-) signed by Notary/1<sup>st</sup> Class Magistrate DD for Rs.500/-</li>
+          </ul>
+          <p class="fee"><strong>Fee:</strong> Rs.500/-</p>
+          <p class="time-frame"><strong>Time frame:</strong> 10 working days</dd>
+          <p class="accountable-officer"><strong>Officer to be contacted for delay or default in service:</strong> The Joint Director</dd>
+        </div>
+      </section>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col" rowspan="2">S.No</th>
+            <th scope="col" rowspan="2">Service</th>
+            <th scope="col" colspan="2">Documents Required</th>
+            <th scope="col" rowspan="2">Time Frame</th>
+            <th scope="col" colspan="2">Fee</th>
+            <th scope="col" rowspan="2">Officer to be contacted for delay or default in service</th>
+          </tr>
+          <tr>
+            <th scope="col">Inter</th>
+            <th scope="col">SSC</th>
+            <th scope="col">Inter</th>
+            <th scope="col">SSC</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Duplicate Memo of Marks </td>
+            <td>
+              <ul>
+                <li>Filled in application form through AI Coordinator</li>
+                <li>Prescribed fee through DD</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Filled in application form through AI Coordinator</li>
+                <li>Prescribed fee through DD</li>
+              </ul>
+            </td>
+            <td>07 working days</td>
+            <td>Rs.200/-</td>
+            <td>Rs.100/-</td>
+            <td>Joint Director</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Duplicate Pass Certificate</td>
+            <td>
+              <ul>
+                <li>Filled in application form forwarded through the  AI Coordinator with photo attestation</li>
+                <li>Xerox copy of pass certificate</li>
+                <li>Police enquiry certificate (non availability)</li>
+                <li>Affidavit (Rs.100/-) signed by Notary/1<sup>st</sup> Class Magistrate</li>
+                <li>DD for Rs.500/-</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Filled in application form forwarded through the  AI Coordinator with photo attestation</li>
+                <li>Xerox copy of pass certificate</li>
+                <li>Police enquiry certificate (non availability)</li>
+                <li>Affidavit (Rs.50/-) signed by Notary/1<sup>st</sup> Class Magistrate</li>
+                <li>DD for Rs.100/-</li>
+              </ul>
+            </td>
+            <td>10 working days</td>
+            <td>Rs.500/-</td>
+            <td>Rs.250/-</td>
+            <td>Joint Director</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Correction in Pass certificate</td>
+            <td>
+              <ul>
+                <li>Covering letter through the AI Coordinator</li>
+                <li>Original Intermediate certificate</li>
+                <li>Original TC cum Migration certificate</li>
+                <li>Original SSC Pass certificate</li>
+                <li>Xerox copy of admission application form attested by AI Coordinator</li>
+                <li>In case of Mothers name correction Ration Card/ Birth certificate</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Covering letter through the AI Coordinator</li>
+                <li>Original SSC pass certificate</li>
+                <li>Original TC cum Migration certificate</li>
+                <li>Original SSC Pass certificate</li>
+                <li>Xerox copy of admission application form attested by AI Coordinator</li>
+                <li>In case of Mothers name correction Ration Card/ Birth certificate</li>
+                <li>Original TC/ Record sheet</li>
+              </ul>
+            </td>
+            <td>07 working days</td>
+            <td>&mdash;</td>
+            <td>&mdash;</td>
+            <td>Joint Director</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Genuineness of Pass Certificate</td>
+            <td>
+              <ul>
+                <li>Original Intermediate pass certificate along with covering letter of the Department</li>
+                <li>No fee for the Government Sector</li>
+                <li>In case of private Sectors DD for Rs.100/-</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Original Intermediate pass certificate along with covering letter of the Department</li>
+                <li>No fee for the Government Sector</li>
+                <li>In case of private Sectors DD for Rs.100/-</li>
+              </ul>
+            </td>
+            <td>10 working days</td>
+            <td>Rs.100/-</td>
+            <td>Rs.100/-</td>
+            <td>Joint Director</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Recounting of marks in answer script</td>
+            <td>Rs.200/- fee for subject to be paid at MEE SEVA centres</td>
+            <td>Rs.100/- fee for subject to be paid at MEE SEVA centres</td>
+            <td>30 working days (after release of results)</td>
+            <td>Rs.200/-</td>
+            <td>Rs.100/-</td>
+            <td>Joint Director</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Withheld cases</td>
+            <td>&mdash;</td>
+            <td>&mdash;</td>
+            <td>30 working days (after release of results)</td>
+            <td>Rs.100/-</td>
+            <td>Rs.100/-</td>
+            <td>Joint Director</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Duplicate T.Cs &amp; Migration Certificates</td>
+            <td>
+              <ul>
+                <li>Filled in application form forwarded through the  AI Coordinator with photo attestation</li>
+                <li>Police enquiry certificate</li>
+                <li>Affidavit (Rs.100/-) signed by Notary/1<sup>st</sup> Class Magistrate DD for Rs.500/-</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Filled in application form forwarded through the  AI Coordinator with photo attestation</li>
+                <li>Police enquiry certificate</li>
+                <li>Affidavit (Rs.50/-) signed by Notary/1<sup>st</sup> Class Magistrate DD for Rs.100/-</li>
+              </ul>
+            </td>
+            <td>10 working days</td>
+            <td>Rs.500/-</td>
+            <td>Rs.100/-</td>
+            <td>Joint Director</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <aside class="related-links card">
+      <div>
+        <h1>Schemes and Services</h1>
+        <ul>
+          <li><a href="ssc-scheme.html">SSC</a></li>
+          <li><a href="intermediate-scheme.html">Intermediate</a></li>
+          <li><a href="citizen-charter.html">Citizen Charter</a></li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+  <footer>
+    <div class="container">
+      <section class="contact-ctas">
+        <div class="tel">
+          <a href="tel:+9140-23299568">
+            <span>Office Phone Number :</span>
+            <span>+9140 2329 9568</span>
+          </a>
+        </div>
+        <div class="email">
+          <a href="mailto:dirtoshyd@gmail.com">
+            <span>E-mail ID :</span>
+            <span>dirtoshyd@gmail.com</span>
+          </a>
+        </div>
+      </section>
+      <section class="sitemap">
+        <ul>
+          <li class="level-1 has-sub">
+            <h1>About Us</h1>
+            <ul class="submenu">
+              <li class="level-2"><a href="profile-objectives-mandate.html" class="level-2-a">Profile, Objectives and Mandate</a></li>
+              <li class="level-2"><a href="organogram.html" class="level-2-a">Organogram</a></li>
+              <li class="level-2"><a href="list-of-hods.html" class="level-2-a">List of HODs</a></li>
+              <li class="level-2"><a href="state-and-district-hierarchies.html" class="level-2-a">State and District Hierarchies</a></li>
+            </ul>
+          </li>
+          <li class="level-1 has-sub">
+            <h1>Schemes and Services</h1>
+            <ul class="submenu">
+              <li class="level-2"><a href="ssc-scheme.html" class="level-2-a">SSC</a></li>
+              <li class="level-2"><a href="intermediate-scheme.html" class="level-2-a">Intermediate</a></li>
+              <li class="level-2"><a href="citizen-charter.html" class="level-2-a">Citizen Charter</a></li>
+            </ul>
+          </li>
+          <li class="level-1"><a href="achievements.html" class="level-1-a">Achievements</a></li>
+          <li class="level-1"><a href="news-and-media.html" class="level-1-a">News and Media</a></li>
+          <li class="level-1"><a href="gallery.html" class="level-1-a">Gallery</a></li>
+          <li class="level-1"><a href="contact-us.html" class="level-1-a">Contact Us</a></li>
+        </ul>
+      </section>
+      <section class="view-in-map">
+        <p><a href="contact-us.html#map">View location in the map</a></p>
+      </section>
+      <section class="copyright">
+        <p>&copy; Copyright 2018, Telangana Open School Society. All rights reserved.</p>
+        <ul>
+          <li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+      </section>
+    </div>
+  </footer>
+  <script src="js/toss.js" defer></script>
+<script>
+  (function(){
+    window.addEventListener('DOMContentLoaded', h2ToButton);
+    function h2ToButton(){
+      var x = document.querySelectorAll('.expandable h2');
+      Array.prototype.forEach.call(x, function(a){
+        a.innerHTML = "<button aria-expanded='false'>"+ a.innerHTML +"</button>";
+      });
+      window.removeEventListener('DOMContentLoaded', h2ToButton);
+    }
+  })();
+</script>
+<script>
+  (function(){
+  
+    document.querySelector('main').addEventListener('click', function(e){
+      var t = e.target;
+      if(t.matches('.expandable button')){
+        openAndClose(t);
+      }
+    });
+
+    function openAndClose(btn){
+      var expandable = btn.closest('.expandable');
+      var details = expandable.getElementsByClassName('details')[0];
+      if(btn.getAttribute('aria-expanded') === 'false'){
+        expand(expandable, details, btn);
+      }
+      else{
+        collapse(expandable, details, btn);
+      }
+    }
+    
+    function expand(el, details, btn){
+      el.classList.add('expanded');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+
+    function collapse(el, details, btn){
+      el.classList.add('collapsing');
+      el.addEventListener('transitionend', function cleanUp(){
+        el.classList.remove('expanded');
+        el.classList.remove('collapsing');
+        el.removeEventListener('transitionend', cleanUp);
+      });
+      btn.setAttribute('aria-expanded', 'false');
+    }
+
+  })();
+</script>
+</body>
+</html>

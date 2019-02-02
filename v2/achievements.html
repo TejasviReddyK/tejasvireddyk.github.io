@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Template</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700|Rubik:700" rel="stylesheet">
+  <style>
+    .stats{
+      display:flex; justify-content:space-between;
+    }
+    .stats section{
+      width:47%;
+    }
+    table{
+      border-collapse:collapse; width:100%; font-variant-numeric:lining-nums;
+    }
+    tr + tr{
+      border-top:1px solid #dfdfdf;
+    }
+    th{
+      background-color:#f6f6f6; font-weight:500; font-size:15px; line-height:20px;
+    }
+    th span {
+	    font-variant-position:super; color:#00944d; font-weight:700;
+    }
+    tbody{
+      border-top:1px solid #dfdfdf;
+    }
+    tbody th{
+      white-space:nowrap; background:none;
+    }
+    th,td{
+      padding:8px 24px; text-align:right;
+    }
+    .table-summary{
+	    font-weight:500; line-height:3rem;
+    }
+    .to-be-conducted{
+      font-size:15px; line-height:15px; opacity:.4;
+    }
+    .stats h2{
+      font-size:20px; margin-top:0;
+    }
+
+    @media (max-width:950px){
+      .stats{
+        flex-wrap:wrap;
+      }
+      .stats section{
+        width:100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logos container">
+      <div class="logo">
+        <a href="index.html">
+          <div class="animating-logos">
+            <img src="images/telangana-open-school-society-logo.png" alt="" />
+            <img src="images/govt-of-telangana-logo.png" alt="" />
+            <img src="images/telangana-open-school-society-logo.png" alt="" />
+          </div>
+          <span class="wordmark"><span class="screen-reader-text">Telangana Open School Society</span></span>
+        </a>
+      </div>
+      <div class="tg-logo">
+        <img src="images/govt-of-telangana-logo.png" alt="Government of Telangana" />
+      </div>
+    </div>
+    <nav>
+      <button type="button" aria-controls="primary-menu-wrapper" aria-expanded="false" class="show-menu">Menu</button>
+      <div class="primary-menu-mask"></div>
+      <div class="primary-menu-wrapper container" id="primary-menu-wrapper">
+        <button type="button" aria-controls="primary-menu-wrapper" class="hide-menu">Hide Menu</button>
+        <ul id="primary-menu" class="primary-menu">
+          <li class="level-1"><a href="index.html" class="level-1-a">Home</a></li>
+          <li class="level-1 has-sub">
+            <a href="profile-objectives-mandate.html" class="level-1-a kbd-hide">About Us</a>
+            <button type="button" aria-controls="about-us-submenu" aria-expanded="false" class="level-1-a kbd-show">About Us</button>
+            <ul id="about-us-submenu" class="submenu">
+              <li class="level-2"><a href="profile-objectives-mandate.html" class="level-2-a">Profile, Objectives and Mandate</a></li>
+              <li class="level-2"><a href="organogram.html" class="level-2-a">Organogram of Telangana Open School Society</a></li>
+              <li class="level-2"><a href="list-of-hods.html" class="level-2-a">List of HODs</a></li>
+              <li class="level-2"><a href="state-and-district-hierarchies.html" class="level-2-a">State and District Hierarchies</a></li>
+            </ul>
+          </li>
+          <li class="level-1 has-sub">
+            <a href="ssc-scheme.html" class="level-1-a kbd-hide">Schemes and Services</a>
+            <button type="button" aria-controls="administration-submenu" aria-expanded="false" class="level-1-a kbd-show">Schemes and Services</button>
+            <ul id="administration-submenu" class="submenu">
+              <li class="level-2"><a href="ssc-scheme.html" class="level-2-a">SSC</a></li>
+              <li class="level-2"><a href="intermediate-scheme.html" class="level-2-a">Intermediate</a></li>
+              <li class="level-2"><a href="citizen-charter.html" class="level-2-a">Citizen Charter</a></li>
+            </ul>
+          </li>
+          <li class="level-1"><a href="achievements.html" class="level-1-a">Achievements</a></li>
+          <li class="level-1"><a href="news-and-media.html" class="level-1-a">News and Media</a></li>
+          <li class="level-1"><a href="gallery.html" class="level-1-a">Gallery</a></li>
+          <li class="level-1"><a href="contact-us.html" class="level-1-a">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="container" style="display:block">
+    <section class="main-section">
+      <h1 class="main-h1">Achievements</h1>
+      <p>Since it&rsquo;s inception, Telangana Open School Society has been very successful in enrolling and certifying thousands of learners. Over the past four academic years alone, over 3,40,000 learners have enrolled in <abbr>TOSS</abbr>&rsquo;s <abbr>SSC</abbr> and Intermediate schemes, out of whom, over 1,40,000 learners have been certified across both the schemes. Below is a break-up of the figures for the past four academic years.</p>
+      <div class="stats">
+        <section>
+          <h2>SSC</h2>
+          <table class="card">
+            <thead>
+              <tr>
+                <th scope="col">Year</th>
+                <th scope="col">No. of learners enrolled</th>
+                <th scope="col">No. of learners Certified</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2014-15</td>
+                <td>49,354</td>
+                <td>29,387</td>
+              </tr>
+              <tr>
+                <td>2015-16</td>
+                <td>47,389</td>
+                <td>26,972</td>
+              </tr>
+              <tr>
+                <td>2016-17</td>
+                <td>44,348</td>
+                <td>17,684</td>
+              </tr>
+              <tr>
+                <td>2017-18</td>
+                <td>43,314</td>
+                <td class="to-be-conducted">Exams to be conducted</td>
+              </tr>
+              <tr class="table-summary">
+                <td>Total</td>
+                <td>1,84,405</td>
+                <td>74,043</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section>
+          <h2>Intermediate</h2>
+          <table class="card">
+            <thead>
+              <tr>
+                <th scope="col">Year</th>
+                <th scope="col">No. of learners enrolled</th>
+                <th scope="col">No. of learners Certified</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2014-15</td>
+                <td>49,128</td>
+                <td>33,151</td>
+              </tr>
+              <tr>
+                <td>2015-16</td>
+                <td>44,465</td>
+                <td>30,911</td>
+              </tr>
+              <tr>
+                <td>2016-17</td>
+                <td>36,427</td>
+                <td>20,666</td>
+              </tr>
+              <tr>
+                <td>2017-18</td>
+                <td>31,071</td>
+                <td class="to-be-conducted">Exams to be conducted</td>
+              </tr>
+              <tr class="table-summary">
+                <td>Total</td>
+                <td>1,61,091</td>
+                <td>84,728</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+
+      <h1 class="highlight" style="margin-top:3em">Physical Target</h1>
+      <div class="stats">
+      <section>
+      <h2>SSC</h1>
+      <table class="card">
+        <thead>
+          <tr>
+            <th scope="col">Year</th>
+            <th scope="col">Target <span>*</span></th>
+            <th scope="col">Achievement <span>*</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2016-17</td>
+            <td>50,000</td>
+            <td>44,405 (89%)</td>
+          </tr>
+          <tr>
+            <td>2017-18</td>
+            <td>50,000</td>
+            <td>43,314 (87%)</td>
+          </tr>
+          <tr>
+            <td>2018-19</td>
+            <td>50,000</td>
+            <td class="to-be-conducted">Exams to be conducted</td>
+          </tr>
+        </tbody>
+      </table>
+      <p><strong><span>*</span>Targets and Achievements are in terms of Enrolment of Learners</strong></p>
+      </section>
+
+      <section>
+      <h2>Intermediate</h2>
+      <table class="card">
+        <thead>
+          <tr>
+            <th scope="col">Year</th>
+            <th scope="col">Target <span>*</span></th>
+            <th scope="col">Achievement <span>*</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2016-17</td>
+            <td>50,000</td>
+            <td>36,427 (73%)</td>
+          </tr>
+          <tr>
+            <td>2017-18</td>
+            <td>50,000</td>
+            <td>31,071 (62%)</td>
+          </tr>
+          <tr>
+            <td>2018-19</td>
+            <td>50,000</td>
+            <td class="to-be-conducted">Exams to be conducted</td>
+          </tr>
+        </tbody>
+      </table>
+      <p><strong><span>*</span>Targets and Achievements are in terms of Enrolment of Learners</strong></p>
+      </section>
+      </div>
+<!--<table class="card">
+  <thead>
+    <tr>
+      <th colspan="2" scope="col">Physical Targets for 2016-17</th>
+      <th colspan="2" scope="col">Physical Targets for 2017-18</th>
+      <th rowspan="2" scope="col">Physical Targets proposed for 2018-19</th>
+      <th rowspan="2" scope="col">Remarks</th>
+    </tr>
+    <tr>
+      <th>Target</th>
+      <th>Achievement</th>
+      <th>Target</th>
+      <th>Achievement</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>50,000</td>
+      <td></td>
+      <td>50,000</td>
+      <td></td>
+      <td>50,000</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>-->
+
+
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <section class="contact-ctas">
+        <div class="tel">
+          <a href="tel:+9140-23299568">
+            <span>Office Phone Number :</span>
+            <span>+9140 2329 9568</span>
+          </a>
+        </div>
+        <div class="email">
+          <a href="mailto:dirtoshyd@gmail.com">
+            <span>E-mail ID :</span>
+            <span>dirtoshyd@gmail.com</span>
+          </a>
+        </div>
+      </section>
+      <section class="sitemap">
+        <ul>
+          <li class="level-1 has-sub">
+            <h1>About Us</h1>
+            <ul class="submenu">
+              <li class="level-2"><a href="profile-objectives-mandate.html" class="level-2-a">Profile, Objectives and Mandate</a></li>
+              <li class="level-2"><a href="organogram.html" class="level-2-a">Organogram</a></li>
+              <li class="level-2"><a href="list-of-hods.html" class="level-2-a">List of HODs</a></li>
+              <li class="level-2"><a href="state-and-district-hierarchies.html" class="level-2-a">State and District Hierarchies</a></li>
+            </ul>
+          </li>
+          <li class="level-1 has-sub">
+            <h1>Schemes and Services</h1>
+            <ul class="submenu">
+              <li class="level-2"><a href="ssc-scheme.html" class="level-2-a">SSC</a></li>
+              <li class="level-2"><a href="intermediate-scheme.html" class="level-2-a">Intermediate</a></li>
+              <li class="level-2"><a href="citizen-charter.html" class="level-2-a">Citizen Charter</a></li>
+            </ul>
+          </li>
+          <li class="level-1"><a href="achievements.html" class="level-1-a">Achievements</a></li>
+          <li class="level-1"><a href="news-and-media.html" class="level-1-a">News and Media</a></li>
+          <li class="level-1"><a href="gallery.html" class="level-1-a">Gallery</a></li>
+          <li class="level-1"><a href="contact-us.html" class="level-1-a">Contact Us</a></li>
+        </ul>
+      </section>
+      <section class="view-in-map">
+        <p><a href="contact-us.html#map">View location in the map</a></p>
+      </section>
+      <section class="copyright">
+        <p>&copy; Copyright 2018, Telangana Open School Society. All rights reserved.</p>
+        <ul>
+          <li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+      </section>
+    </div>
+  </footer>
+  <script src="js/toss.js" defer></script>
+</body>
+</html>
