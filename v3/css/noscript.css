@@ -1,0 +1,6 @@
+.hide-if-js-enabled{
+  display:block!important;
+}
+.hide-if-no-js{
+  display:none!important;
+}

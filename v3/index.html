@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Template</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700|Source+Serif+Pro:600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/vow0fff.css">
+  <meta name="theme-color" content="#d9bc85">
+  <noscript>
+    <link rel="stylesheet" href="css/noscript.css">
+  </noscript>
+  <style>
+.introduction h1{
+  font-family:source-serif-pro, serif; font-weight:900; margin:0;
+}
+.sidebar h1 {
+	font-size:17px; font-weight:700;
+}
+@media (max-width:1024px){
+  main{
+    display:block;
+  }
+  main > section{
+    margin:20px 0;
+  }
+}
+@media (min-width:1156px){
+  .introduction{
+    width:808px; flex-shrink:0;
+  }
+  .sidebar{
+    margin-left:1rem;
+  }
+}
+@media (max-width:1155px){
+  main{
+    margin-top:0;
+  }
+}
+.banners-container{
+  height:400px; position:relative; overflow:hidden;
+}
+.banners,
+.banner{
+  width:100%; height:100%;
+}
+.banners{
+  position:relative;
+}
+.banner{
+  position:absolute; transition:opacity 1s ease; padding-bottom:36px; box-sizing:border-box; display:none;
+}
+.banner.active{
+  display:block; animation:fade-in .5s ease;
+}
+.banner.in-transition{
+  opacity:0;
+}
+@keyframes fade-in{
+  from{opacity:0} to{opacity:1}
+}
+.banner-picture{
+  height:300px;
+}
+.banner p{
+  margin-top:8px; line-height:24px;
+}
+.list-of-subjects{
+  position:relative; left:-.125rem; margin-top:1rem;
+}
+.list-of-subjects span{
+  display:inline-block; padding:.125rem .25rem; margin:.125rem; background:#fff; color:#000; font-size:13px; line-height:15px; border-radius:4px; opacity:.5;
+}
+.banner-navigation{
+  position:absolute; right:20px; bottom:20px;
+}
+.next-banner,
+.previous-banner{
+  background-image:url(images/arrow-down.svg); background-repeat:no-repeat; background-position:center; border:none; width:40px; height:40px; border-radius:50%;
+}
+.previous-banner{
+  transform:rotate(90deg);
+}
+.next-banner{
+  transform:rotate(-90deg);
+}
+.next-banner:hover,
+.next-banner:focus,
+.previous-banner:focus,
+.previous-banner:hover{
+  background-color:#c69a47;
+}
+.next-banner::-moz-focus-inner,
+.previous-banner::-moz-focus-inner{
+  border:none
+}
+@media (min-width:1156px){
+  .banners-container.fw-md{
+    width:100%; margin-left:0;
+  }
+}
+.about-us{
+  margin-top:1rem;
+}
+.about-us h1{
+  margin:0;
+}
+.key-people{
+  padding:0 .5rem; border:1px solid #eadabc;
+}
+.key-people h1{
+  font-size:20px; padding:3px 0; font-weight:700; border-bottom:1px solid #eadabc;
+}
+.key-people ul{
+  list-style:none; padding:0; margin:0; font-size:13px; ; line-height:.75rem;
+}
+.key-people li{
+  display:flex; align-items:center; padding:.5rem 0;
+}
+.key-people li + li{
+  border-top:1px solid #eadabc;
+}
+.key-people img{
+  width:2.5rem; flex-shrink:0; border-radius:4px; margin-right:.5rem;
+}
+.key-people .name{
+  font-weight:500;
+}
+.key-people .designation{
+  color:#666;
+}
+
+@media (min-width:670px){
+  .about-us .content-wrapper{
+    display:flex; justify-content:space-between; align-items:flex-start; grid-gap:.75rem;
+  }
+  .about-us .content-wrapper{
+    margin-top:.5rem;
+  }
+  .about-us .content-wrapper p:first-child{
+    margin-top:0;
+  }
+  .about-us h1{
+    width:100%;
+  }
+  .key-people{
+    width:260px; flex-shrink:0;
+  }
+}
+
+.news-container ul{
+  padding-left:0; margin:0; list-style:none;
+}
+.news-container ul::-webkit-scrollbar{
+  width:4px; height:4px;
+}
+.news-container ul::-webkit-scrollbar-thumb{
+  background-color:rgba(0,0,0,.26);
+}
+.news-container li{
+  border-bottom:1px solid #aaa; position:relative;
+}
+.news-container li:last-child{
+  border-radius:0 0 4px 4px; border-bottom:none;
+}
+.news-container li a{
+  padding:12px 0; display:block;
+}
+.news-container li{
+	background:url(images/file-document-box-outline.svg) no-repeat .25rem .5rem; border-bottom:1px dotted #aaa; position:relative;
+}
+.news-container li.new::after{
+	content:"new"; font-size:11px; position:absolute; top:0; left:.25rem; display:block; margin-top:.25rem; width:auto; text-align:center; padding:0 2px 2px; background-color:red; color:#fff; border-radius:2px; line-height:1;
+}
+.news-container li a{
+	padding:.5rem .5rem .5rem 1.5rem; font-size:13px; line-height:.75rem; display: block;
+}
+@media (min-width:1156px){
+  .news-container ul{
+    padding-left:0; margin:0; list-style:none; overflow:auto; height:351px;
+  }
+}
+@media (max-width:1155px){
+  .news-container{
+    margin-top:2.5rem;
+  }
+}
+.quick-links{
+  margin-top:.5rem; font-size:15px;
+}
+.quick-links ul{
+  margin:0;
+}
+.quick-links li{
+  border-bottom:1px solid #e4e4e4;
+}
+.quick-links li:last-child{
+  border-bottom:none;
+}
+.quick-links a{
+  display:block; padding:8px 0 8px .5rem;
+}
+.quick-links a:before{
+  content:""; display:inline-block; vertical-align:middle; width:4px; height:4px; border:1px solid; border-radius:4px; margin-right:.5rem;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <a href="#main" class="screen-reader-text skip-link">Skip to main content</a>
+    <div class="container">
+      <div class="logo-and-affiliation">
+        <div class="logo">
+          <a href="index.html">
+            <div class="logo-figure">
+              <img src="images/telangana-open-school-society-logo.png" alt="" />
+            </div><span class="wordmark">Telangana Open School Society</span>
+          </a>
+        </div>
+        <div class="affiliation">
+          <img src="images/govt-of-telangana-logo.png" alt="" />
+          <p class="lg-fs-3 lg-lh-3 md-fs-3 md-lh-3"><span>Affiliated to </span><span>Government of </span><span>Telangana</span></p>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <div class="container show-menu-wrapper">
+        <button type="button" aria-controls="primary-menu-wrapper" aria-expanded="false" class="show-menu">Menu</button>
+      </div>
+      <div class="primary-menu-mask"></div>
+      <div class="primary-menu-wrapper" id="primary-menu-wrapper">
+        <a href="#site-menu" class="hide-if-js-enabled">Menu</a>
+        <button type="button" aria-controls="primary-menu-wrapper" class="hide-menu container">Hide Menu</button>
+        <ul id="primary-menu" class="hide-if-no-js primary-menu container lg-fs-2 lg-lh-2 md-fs-2">
+          <li class="level-1"><a href="index.html" class="level-1-a">Home</a></li>
+          <li class="level-1 has-sub">
+            <a href="profile-objectives-mandate.html" class="level-1-a kbd-hide">About Us</a>
+            <button type="button" aria-controls="about-us-submenu" aria-expanded="false" class="level-1-a kbd-show">About Us</button>
+            <ul id="about-us-submenu" class="submenu lg-fs-3 lg-lh-2">
+              <li class="level-2"><a href="profile-objectives-mandate.html" class="level-2-a">Profile, Objectives and Mandate</a></li>
+              <li class="level-2"><a href="organogram.html" class="level-2-a">Organogram of Telangana Open School Society</a></li>
+              <li class="level-2"><a href="list-of-hods.html" class="level-2-a">List of HODs</a></li>
+              <li class="level-2"><a href="state-and-district-hierarchies.html" class="level-2-a">State and District Hierarchies</a></li>
+            </ul>
+          </li>
+          <li class="level-1 has-sub">
+            <a href="ssc-scheme.html" class="level-1-a kbd-hide">Schemes and Services</a>
+            <button type="button" aria-controls="administration-submenu" aria-expanded="false" class="level-1-a kbd-show">Schemes and Services</button>
+            <ul id="administration-submenu" class="submenu lg-fs-3 lg-lh-2">
+              <li class="level-2"><a href="ssc-scheme.html" class="level-2-a">SSC</a></li>
+              <li class="level-2"><a href="intermediate-scheme.html" class="level-2-a">Intermediate</a></li>
+              <li class="level-2"><a href="citizen-charter.html" class="level-2-a">Citizen Charter</a></li>
+            </ul>
+          </li>
+          <li class="level-1"><a href="achievements.html" class="level-1-a">Achievements</a></li>
+          <li class="level-1"><a href="news-and-media.html" class="level-1-a">News and Media</a></li>
+          <li class="level-1"><a href="gallery.html" class="level-1-a">Gallery</a></li>
+          <li class="level-1"><a href="contact-us.html" class="level-1-a">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="container" id="main">
+    <div class="introduction">
+      <section class="banners-container fw-md fw-sm fw-xs">
+        <div class="banners">
+          <section class="banner active" style="background:#A7226e; color:#fff;">
+            <div class="container">
+              <div class="a">
+                <p><strong style="font-family:Source Serif Pro, serif; font-weight:700; font-size:28px; line-height:32px; display:block; margin:1.5rem 0 1rem;">Welcome to <span style="display:block">Telangana Open School Society.</span></strong> Telangana Open School shall provide ample access to sustainable learner-centric quality education, skill upgradation and training to learners by using innovative technologies and methodologies of Open and Distance Learning(ODL).</p>
+                <p style="margin-top:2rem; font-style:italic; opacity:.7; font-size:15px;">Telangana Open School Society is affiliated to the Government of Telangana.</p>
+              </div>
+            </div>
+          </section>
+          <section class="banner" style="background:#ec2049; color:#fff;">
+            <div class="container">
+              <div style="margin:1.5rem 0;">
+                <p><strong style="font-family:Source Serif Pro, serif; font-weight:700; font-size:28px; line-height:32px; display:block; margin:1.5rem 0 1rem;">Freedom to Learn.</strong>
+                <p>Telangana Open School Society gives the student the freedom to choose: what to study and when to study.</p>
+                <div class="list-of-subjects" role="presentation" aria-hidden="true"><span>हिन्दी</span><span>English</span><span>मराठी</span><span>తెలుగు</span><span> اُردُو</span><span>ಕನ್ನಡ</span><span>ଓଡ଼ିଆ</span><span>தமிழ்</span><span>Mathematics</span><span>Science &amp; Technology</span><span>Social Studies</span><span>Economics</span><span>Business Studies</span><span>Home Science</span><span>Psychology</span><span>Indian Culture &amp; Heritage</span><span>Tailoring, Designing &amp; Dress Making</span><span>Cell Phone Mechanism</span><span>Electrician and house wiring</span><span>Welding</span><span>Masonry</span><span>Carpentry</span>
+<span>Computer Course</span><span>Pre-School Teacher Training</span><span>Automobile Mechanism</span><span>Beautician &amp; Health Care</span></div>
+              </div>
+            </div>
+          </section>
+          <section class="banner" style="background:#f26b38; color:#fff;">
+            <div class="container">
+              <div class="a">
+                <p><strong style="font-family:Source Serif Pro, serif; font-weight:700; font-size:28px; line-height:32px; display:block; margin:1.5rem 0 1rem;">Reach Out and Reach All.</strong></p>
+                <p>Telangana Open School Society operates with a mission to be accessible to everyone. In the past four academic years alone, over 3,40,000 candidates have enrolled in <abbr>TOSS</abbr>&rsquo;s schemes.</p>
+              </div>
+              <div class="b" style="margin-top:1.5rem">
+                <div style="max-width:240px; display:inline-block; vertical-align:top; font-size:13px; line-height:15px;width: 40%;min-width: 150px;">
+                  <span style="font-family:Source Serif Pro, serif; font-weight:600; display:block; font-size:35px;">1,84,405</span>
+                  <span style="margin-top:.75rem; display:block; width:150px;">Number of candidates enrolled in TOSS's SSC scheme</span>
+                </div>
+                <div style="max-width:240px; display:inline-block; vertical-align:top; font-size:13px; line-height:15px;width: 40%;min-width: 150px;">
+                  <span style="font-family:Source Serif Pro, serif; font-weight:600; display:block; font-size:35px;">1,61,091</span>
+                  <span style="margin-top:.75rem; display:block; width:150px;">Number of candidates enrolled in TOSS's Intermediate scheme</span>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!--<section class="banner">
+            <div class="container">
+              <div class="a">
+                <p><strong>Thousands of certified candidates.</strong> Telangana Open School Society operates with a mission to be accessible to everyone. In the past four academic years alone, over 3,40,000 candidates have enrolled in <abbr>TOSS</abbr>&rsquo;s schemes.</p>
+              </div>
+              <div class="b">
+                <div>
+                  <span>1,84,405</span>
+                  <span>Number of candidates enrolled in TOSS's SSC scheme</span>
+                </div>
+                <div>
+                  <span>1,84,405</span>
+                  <span>Number of candidates enrolled in TOSS's SSC scheme</span>
+                </div>
+              </div>
+            </div>
+          </section>-->
+        </div><!-- .banners-container -->
+        <div class="banner-navigation">
+          <button type="button" class="previous-banner">
+            <span class="screen-reader-text">Freedom to Learn</span>
+          </button>
+          <button type="button" class="next-banner">
+            <span class="screen-reader-text">Reach Out and Reach All</span>
+          </button>
+          <!--<button type="button" class="previous-banner">
+            <span class="screen-reader-text">Achievements</span>
+          </button>-->
+        </div><!-- .banner-navigation -->
+      </section>
+      <section class="about-us">
+        <h1>About Us</h1>
+        <div class="content-wrapper">
+          <div>
+            <p>The Telangana Open School Society is formerly a part of Andhra Pradesh Open School Society of the erstwhile state of Andhra Pradesh established in the year 1991 to provide a flexible type of non-formal education to the drop-out children.</p>
+            <p>Telangana Open School Society was formed and registered under A.P. Societies Registration Act, 2001 and it was functioning under the School Education Department, Government of Telangana.</p>
+          </div>
+          <section class="key-people">
+            <h1>Key People</h1>
+            <ul>
+              <li>
+                <img src="images/smt-ranjeev-acharya.png" >
+                <span class="caption"><span class="name">Smt. Ranjeev R. Acharya, IAS,</span> <span class="designation">Principal Secretary, TS Government</span></span>
+              </li>
+              <li>
+                <img src="images/s-venkateswara-sharma.png" >
+                <span class="caption"><span class="name">S. Venkateswara Sharma,</span> <span class="designation">Director</span></span>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </section>
+    </div>
+    <div class="sidebar">
+      <section class="news">
+        <div class="news-container card">
+          <h1>News and Media</h1>
+          <ul>
+            <li class="new">
+              <a href="">
+                <abbr>SSC</abbr> &amp; Intermediate (<abbr>TOSS</abbr>) Public Examinations Oct, 2018 Examination Fee Due Dates
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <abbr>SSC</abbr> &amp; Inter Public Examination Oct, 2018 Tatkal Due Dates
+              </a>
+            </li>
+            <li class="new">
+              <a href="">
+                <abbr>SSC</abbr> &amp; Inter (<abbr>TOSS</abbr>) Public Examinations Time-table October - 2018
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <abbr>SSC</abbr> &amp; Intermediate (<abbr>TOSS</abbr>) public examinations October - 2018 Hall Tickets
+              </a>
+            </li>
+            <li>
+              <a href="">
+                Inter Passed Students Data Yearwise
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <abbr>SSC</abbr> Passed Students Data Yearwise
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="quick-links card">
+        <h1>Quick Links</h1>
+        <ul>
+          <li><a href="">Results</a></li>
+          <li><a href="">Inter passed data</a></li>
+          <li><a href="">SSC passed data</a></li>
+          <li><a href="">Gazette</a></li>
+          <li><a href="">Notification</a></li>
+          <li><a href="">Nominal Rolls</a></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <section class="contact-ctas">
+        <div class="tel">
+          <a href="tel:+9140-23299568">
+            <span>Office Phone Number :</span>
+            <span>+9140 2329 9568</span>
+          </a>
+        </div>
+        <div class="email">
+          <a href="mailto:dirtoshyd@gmail.com">
+            <span>E-mail ID :</span>
+            <span>dirtoshyd@gmail.com</span>
+          </a>
+        </div>
+      </section>
+      <section class="sitemap" id="site-menu">
+        <ul>
+          <li class="level-1 has-sub">
+            <h1>About Us</h1>
+            <ul class="submenu">
+              <li class="level-2"><a href="profile-objectives-mandate.html" class="level-2-a">Profile, Objectives and Mandate</a></li>
+              <li class="level-2"><a href="organogram.html" class="level-2-a">Organogram</a></li>
+              <li class="level-2"><a href="list-of-hods.html" class="level-2-a">List of HODs</a></li>
+              <li class="level-2"><a href="state-and-district-hierarchies.html" class="level-2-a">State and District Hierarchies</a></li>
+            </ul>
+          </li>
+          <li class="level-1 has-sub">
+            <h1>Schemes and Services</h1>
+            <ul class="submenu">
+              <li class="level-2"><a href="ssc-scheme.html" class="level-2-a">SSC</a></li>
+              <li class="level-2"><a href="intermediate-scheme.html" class="level-2-a">Intermediate</a></li>
+              <li class="level-2"><a href="citizen-charter.html" class="level-2-a">Citizen Charter</a></li>
+            </ul>
+          </li>
+          <li class="level-1"><a href="achievements.html" class="level-1-a">Achievements</a></li>
+          <li class="level-1"><a href="news-and-media.html" class="level-1-a">News and Media</a></li>
+          <li class="level-1"><a href="gallery.html" class="level-1-a">Gallery</a></li>
+          <li class="level-1"><a href="contact-us.html" class="level-1-a">Contact Us</a></li>
+        </ul>
+      </section>
+      <section class="view-in-map">
+        <p><a href="contact-us.html#map">View location in the map</a></p>
+      </section>
+      <section class="copyright">
+        <p>&copy; Copyright 2018, Telangana Open School Society. All rights reserved.</p>
+        <ul>
+          <li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+      </section>
+    </div>
+  </footer>
+  <script src="js/toss.js" defer></script>
+<script defer>
+window.addEventListener('load', function(){
+  var bannersContainer = document.getElementsByClassName('banners-container')[0];
+  var banners = bannersContainer.getElementsByClassName('banners')[0];
+
+  bannersContainer.addEventListener('click', function(e){
+    var target = e.target,
+        active = banners.getElementsByClassName('active')[0],
+        toShowNext;
+
+    if(target.matches('.previous-banner')){
+      toShowNext = active.previousElementSibling;
+      if(!toShowNext) toShowNext = banners.lastElementChild;
+    }
+
+    if(target.matches('.next-banner')){
+      toShowNext = active.nextElementSibling;
+      if(!toShowNext) toShowNext = banners.firstElementChild;
+    }
+
+    toShowNext.classList.add('active');
+    active.classList.add('in-transition');
+  });
+
+  bannersContainer.addEventListener('transitionend', function xyz(e){
+    var t = e.target;
+    t.classList.remove('active');
+    t.classList.remove('in-transition');
+    this.removeEventListener('transitionend', xyz);
+  });
+});
+</script>
+</body>
+</html>
