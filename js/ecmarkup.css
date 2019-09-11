@@ -84,29 +84,27 @@
 } */
 
 body {
-  display: flex;
   font-size: 20px;
   line-height: 1.5;
   font-family: Aktiv Grotesk Trial;
   font-family: Cordale Trial;
-  font-family: Merriweather;
-  font-size:17px;
-  line-height:26px;
-  padding:0 8px;
-  margin:2rem auto;
-  color:#eee;
-  background-color: /*#05213c;*/ #0f1419;
+  font-family: Merriweather, serif;
+  font-family: source-serif-pro, serif;
+  font-family: IBM Plex Sans, sans-serif;
+  font-size: 19px;
+  line-height: 30px;
+  padding:16px 6px 16px 8px;
+  margin: 2rem auto;
+  color: #eee;
+  background-color: #05213c /*#0f1419*/;
   max-width: 650px;
 }
 p{
-  margin: 1.33em 0;
+  margin: 30px 0;
 }
 #spec-container {
   padding: 0 20px;
-  flex-grow: 1;
-  flex-basis: 66%;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 body.oldtoc {
@@ -132,7 +130,8 @@ code {
     font-weight: 500;
     font-family: Ubuntu Mono;
     font-family: Roboto Mono, monospace;
-    font-size: 18px;
+    font-family: IBM Plex Mono, monospace;
+    font-size: 1em;
     white-space: pre;
 }
 
@@ -141,7 +140,7 @@ pre code {
 }
 
 pre code.hljs {
-  background-color: #fff;
+  background-color: #ffffff2e;
   margin: 0;
   padding: 0;
 }
@@ -205,6 +204,7 @@ emu-note {
     border-left: 5px solid #ccc;
     display: flex;
     flex-direction: row;
+    overflow-x:auto;
 }
 
 emu-note > span.note {
@@ -230,6 +230,10 @@ emu-note > div.note-contents > p:first-of-type {
 
 emu-note > div.note-contents > p:last-of-type {
   margin-bottom: 0;
+}
+
+emu-table {
+  display:block; width:100%; overflow-x:auto;
 }
 
 emu-figure {
@@ -315,6 +319,7 @@ emu-rhs emu-nt {
 emu-t {
     display: inline-block;
     font-family: Roboto Mono, monospace;
+    font-family: IBM Plex Mono, monospace;
     font-weight: 500;
     white-space: nowrap;
     text-indent: 0;
@@ -344,6 +349,7 @@ emu-production[collapsed] emu-mods {
 emu-params, emu-opt {
   margin-right: 1ex;
   font-family: Roboto Mono, monospace;
+  font-family: IBM Plex Mono, monospace;
 }
 
 emu-params, emu-constraints {
@@ -372,8 +378,9 @@ h1.version {
 }
 
 h1.title {
-  margin-top: 0;
+  margin-top: 1em;
   color: #f60;
+  font-size:1.75em;
 }
 
 h1.first {
@@ -394,7 +401,7 @@ h1 span.title {
 }
 
 
-h1 { font-size: 2.67em; margin-top: 3em; margin-bottom: 0; line-height: 1.5; font-family:Soleto Trial; font-family:Libre Franklin; font-weight:800;}
+h1 { font-size: 2em; margin-top: 3em; margin-bottom: 0; line-height: 1.25; font-family:Soleto Trial; font-family:'Archivo Black', Roboto, Libre Franklin, sans-serif;}
 h2 { font-size: 2em; }
 h3 { font-size: 1.56em; }
 h4 { font-size: 1.25em; }
@@ -406,8 +413,8 @@ h1:hover span.utils {
 }
 
 span.utils {
-  font-size: 18px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 16px;
   display: none;
   position: absolute;
   top: 100%;
@@ -446,7 +453,7 @@ h6 span.utils span.anchor a:hover {
   color: #333;
 }
 
-emu-intro h1, emu-clause h1, emu-annex h1 { font-size: 2em; }
+emu-intro h1, emu-clause h1, emu-annex h1 { font-size: 2em; line-height:1.35}
 emu-intro h2, emu-clause h2, emu-annex h2 { font-size: 1.56em; }
 emu-intro h3, emu-clause h3, emu-annex h3 { font-size: 1.25em; }
 emu-intro h4, emu-clause h4, emu-annex h4 { font-size: 1.11em; }
