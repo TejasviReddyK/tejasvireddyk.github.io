@@ -23,7 +23,6 @@
     chatFrame.style.display = 'block';
     //mainInputField.focus();
   }
-  showWidget();
 
   function hideWidget(){
     trigger.setAttribute('aria-expanded', 'false');
@@ -33,7 +32,6 @@
 
   window.addEventListener('unload', function(){
     var x = {};
-    console.log('hey! waah!');
     x.timeStamp = (new Date()).getTime();
     x.recipientId = recipientId;
     x.conversation = nquantumChatLog;
@@ -66,6 +64,7 @@
   });
 
   window.addEventListener('message', function(e){
+    console.log(e);
     if(e.source.frameElement !== chatFrame){
       return
     }
