@@ -33,6 +33,7 @@
 
   window.addEventListener('unload', function(){
     var x = {};
+    console.log('hey! waah!');
     x.timeStamp = (new Date()).getTime();
     x.recipient_id = recipient_id;
     x.conversation = nquantumChatLog;
