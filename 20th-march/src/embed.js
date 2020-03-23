@@ -65,7 +65,6 @@
   });
 
   window.addEventListener('message', function(e){
-    return;
     if(e.source.frameElement !== chatFrame){
       return
     }
