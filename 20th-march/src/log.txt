@@ -1,0 +1,19 @@
+Accepting text input and sending the message back to Rasa
+
+Receiving response from Rasa and displaying it to the visitor
+
+If the Rasa response includes interactive content, displaying it appropriately
+
+Form validation
+
+If response to a Rasa message is mandatory, blocking all other inputs
+
+Storing the entire conversation for the duration of the session, persisting over page reloads
+
+Sending the conversation back to the server for analysis
+
+Improving transitions across the UI
+
+Making certain aspects of the bot configurable
+
+Building a single embeddable file from source files

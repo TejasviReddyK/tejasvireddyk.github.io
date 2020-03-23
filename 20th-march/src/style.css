@@ -1,0 +1,371 @@
+/* border-radius, background, box-shadow to be configurable  */
+html{
+  scroll-behavior:smooth;
+}
+html,
+body{
+  height:100%; width:100%; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; color:#222; font-size:15px; line-height:20px;
+}
+body{
+  margin:0;
+}
+input,
+button{
+  font-family:inherit; font-size:inherit; transition:opacity .2s ease-out;
+}
+button{
+  border:none; background:none; cursor:pointer; user-select:none;
+}
+button[disabled]{
+  cursor:auto;
+}
+a{
+  text-decoration:none;
+}
+svg{
+  display:block;
+}
+.screen-reader-text{
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
+.nquantum-chat-window{
+  height:100%; width:100%; background-color:#fafafa; border-radius:28px; -webkit-box-shadow:0 0 38px 14px #e4e4e4; box-shadow:0 0 38px 14px #e4e4e4; overflow:hidden; /*position:relative;*/ display:flex; flex-direction:column;
+}
+header,
+.user .message,
+.bot.buttons .message button:hover,
+.bot.buttons .message button:focus,
+.nquantum-button:hover,
+.nquantum-button:focus,
+.nquantum-chat-trigger:hover,
+.nquantum-chat-trigger:focus{
+  background:linear-gradient(148deg, #012773, #2196F3); color:#fff;
+}
+header{
+  width:100%; -webkit-box-shadow:rgba(60, 64, 67, .3) 0 1px 2px 0, rgba(60, 64, 67, .15) 0 1px 3px 1px; box-shadow:rgba(60, 64, 67, .3) 0 1px 2px 0, rgba(60, 64, 67, .15) 0 1px 3px 1px; font-weight:bold;
+}
+.bot-name{
+  line-height:20px; font-size:16px; padding:36px; font-weight:bold;
+}
+.nquantum-conversation{
+  background:#fafafa; padding:16px 10px 16px 16px; overflow-y:scroll; scrollbar-width:thin; scrollbar-color:#dfdfdf transparent; -webkit-box-sizing:border-box; box-sizing:border-box; flex-grow:1; flex-shrink:1; display:flex; flex-direction:column;
+}
+.nquantum-conversation::-webkit-scrollbar{
+  width:6px;
+}
+.nquantum-conversation::-webkit-scrollbar-track{
+  background:transparent;
+}
+.nquantum-conversation::-webkit-scrollbar-thumb{
+  background-color:#dfdfdf; border-radius:6px; border:3px solid transparent;
+}
+.nquantum-conversation:after{
+  content:''; display:block; clear:both;
+}
+.nquantum-conversation *:first-child{
+  margin-top:auto;
+}
+.primary-action-area{
+  background-color:#fff; border-top:1px solid #c5cdd3; /*position:absolute; bottom:24px;*/ width:100%; box-sizing:border-box; box-shadow: rgba(60, 64, 67, .3) 0 1px 4px -1px, rgba(60, 64, 67, .15) 0 1px 6px -1px; transition:height .9s cubic-bezier(0.13, 0.59, 0.58, 1);
+}
+.user,
+.bot{
+  margin-bottom:4px; clear:both; max-width:80%;
+}
+.user{
+  /*float:right;*/ align-self:flex-end; animation:fade-in .2s ease-in-out;
+}
+.bot{
+  float:left; margin-left:44px; position:relative;
+}
+/*.bot.-loading{
+  animation:bot-loading-transition .2s ease-in-out;
+}
+@keyframes bot-loading-transition{
+  0%{
+    height:0; opacity:0;
+  }
+  99%{
+    opacity:1;
+  }
+  100%{
+    height:50px;
+  }
+}*/
+.primary-action-area .bot{
+  margin-left:0; max-width:100%; float:none; margin-bottom:0;
+}
+@keyframes fade-in{
+  0%{transform:translateY(4px); opacity:0;} 100%{transform:translateY(0); opacity:1;}
+}
+.bot:before{
+  content:''; width:38px; height:38px; border-radius:50%; background:darkgray url(image/smiley-2x.png) no-repeat center; background-size:contain; position:absolute; left:-48px; top:0;
+}
+.user .message,
+.bot .message{
+  padding:4px 8px; border-radius:6px; overflow-wrap:break-word; box-shadow:0px 0px 3px 0px #bbb;
+}
+.user .message{
+  border-top-right-radius:0;
+}
+.bot .message{
+  background-color:#fff; border-top-left-radius:0; animation:message-fade-in .4s ease-out;
+}
+.primary-action-area .message{
+  box-shadow:none; border-radius:0; animation:message-fade-in .5s ease-out;
+}
+@keyframes primary-message-fade-in{
+  0%{opacity:0; transform:scale(0);}  99%{opacity:0;} 100%{opacity:1; transform:scale(1);}
+}
+@keyframes message-fade-in{
+  0%{transform:translateY(4px); opacity:0;} 50%{transform:translateY(4px); opacity:0;} 100%{transform:translateY(0); opacity:1;}
+}
+.time-stamp{
+  min-width:40px; opacity:.3; font-size:10px; font-weight:bold; user-select:none; padding:4px 8px 0;
+}
+.user .time-stamp{
+  text-align:right;
+}
+.submitted-form-data .time-stamp{
+  top:4px;
+}
+.primary-action-area .time-stamp{
+  display:none;
+}
+.time-stamp:before{
+  content:''; width:4px; height:1px;
+}
+.bot.buttons{
+  width:100%;
+}
+.bot.buttons .message{
+  padding:0; overflow:hidden; width:100%;
+}
+.buttons .message p,
+.form .message p{
+  margin:0; padding:8px;
+}
+.primary-action-area .message p{
+  padding:16px; text-align: center;
+}
+.primary-action-area .message p.error{
+  padding:0; text-align:left;
+}
+.bot.buttons .message button{
+  color:#2195f3; border:none; padding:12px 0; display:block; width:100%; border-top:1px solid #dbdbdb;
+}
+.nquantum-conversation.all-disabled *{
+  pointer-events:none;
+}
+.nquantum-conversation.all-disabled button{
+  opacity:.5;
+}
+.nquantum-conversation.all-disabled .bot:last-child *{
+  pointer-events:auto;
+}
+.nquantum-conversation.all-disabled .bot:last-child button{
+  opacity:1;
+}
+.form .message{
+  width:100%; padding:0;
+}
+.message form{
+  padding:8px;
+}
+.primary-action-area .message form{
+  padding-top:0;
+}
+.message input{
+  display:block; padding:18px 0 6px; width:100%; border:none; border-bottom:1px solid #c5cdd3; margin:0;
+}
+.message input:focus{
+  outline:none; padding:18px 0 6px; background:none;
+}
+.submitted-form-data .field-name{
+  font-size:smaller;
+}
+.submitted-form-data .field-value + .field-name{
+  margin-top:1em;
+}
+.submitted-form-data .field-value{
+  font-weight:bold;
+}
+.error{
+	display:none; font-size:13px; color:#d01515; margin-top:4px; font-weight:500;
+}
+.error.show{
+  display:block;
+}
+.nquantum-button{
+  background:#2195f3; color:#fff; border-radius:8px; padding:12px; width:100%; box-sizing:border-box; text-align:center; margin-top:12px; font-variant-caps:all-small-caps; font-weight:bold; letter-spacing:.05em;
+}
+.bot-message.nquantum-social{
+  background:none; margin-top:-10px
+}
+.bot-message.nquantum-social a{
+  margin-right:4px;
+}
+.bot-message.nquantum-social img{
+  margin:0 8px 0 0; width:24px;
+}
+form.nquantum-main-input-form{
+  width:100%; padding:8px 54px 8px 8px; box-sizing:border-box; position:relative;
+}
+.bot + form.nquantum-main-input-form{
+  border-top: 1px solid #c5cdd3;
+}
+form.nquantum-main-input-form.hidden{
+  display:none;
+}
+form.nquantum-main-input-form input[type=text].nquantum-main-input{
+  padding:8px; width:100%; box-sizing:border-box; color:#333; height:40px; line-height:1.5; border:none;
+}
+form.nquantum-main-input-form input[type=text].nquantum-main-input:focus{
+  outline:none!important; box-shadow:none!important;
+}
+form.nquantum-main-input-form input[type=text].nquantum-main-input[disabled]{
+  background:none; opacity:.2;
+}
+nquantum-main-input-helper-text{
+  display:none;
+}
+button.nquantum-main-input-submit{
+  background:none!important; border:0!important; position:absolute; right:4px; padding:6px; top:50%; margin-top:-24px;
+}
+button.nquantum-main-input-submit svg path{
+  fill:#2189e5;
+}
+button.nquantum-main-input-submit[disabled] svg path{
+  fill:#cdcdcd;
+}
+footer{
+  /*position:absolute; bottom:0; width:100%;*/ height:24px; text-align:center; background:#fff;
+}
+footer a{
+  font-size:12px; opacity:.3;
+}
+footer a:focus,
+footer a:hover{
+  opacity:1; font-weight:bold;
+}
+button.nquantum-chat-trigger{
+  background:#2195f3; position:absolute; right:0; bottom:0; padding:16px; box-shadow:0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0,0,0,.12); transform:scaleX(-1); border-radius:50%; animation:nquantum-heart-beat 1s ease infinite;
+}
+@keyframes nquantum-heart-beat{
+	0%{transform: scale(-1,1)}
+	14%{transform: scale(-1.3,1.3)}
+	28%{transform: scale(-1,1)}
+	42%{transform: scale(-1.3,1.3)}
+	70%{transform: scale(-1,1)}
+}
+button.nquantum-chat-trigger:focus,
+button.nquantum-chat-trigger:hover,
+button.nquantum-chat-trigger[aria-expanded=true]{
+  animation:none;
+}
+button.nquantum-chat-trigger:focus,
+button.nquantum-chat-trigger:hover{
+  transform:scale(-1.25,1.25);
+}
+button.nquantum-chat-trigger svg path{
+  fill:#fff;
+}
+button.nquantum-chat-trigger[aria-expanded=false] svg.nquantum-close-icon,
+button.nquantum-chat-trigger[aria-expanded=true] svg.nquantum-chat-icon{
+  display:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.spinner{
+  width: 50px;
+  height: 40px;
+  text-align: center;
+}
+
+.nquantum-spinner-bar-rect1,
+.nquantum-spinner-bar-rect2,
+.nquantum-spinner-bar-rect3,
+.nquantum-spinner-bar-rect4,
+.nquantum-spinner-bar-rect5{
+  background-color: #cbcbcc;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+  margin:0 1px;
+  -webkit-animation: nquantum-sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: nquantum-sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.nquantum-spinner-bar-rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.nquantum-spinner-bar-rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.nquantum-spinner-bar-rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.nquantum-spinner-bar-rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes nquantum-sk-stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes nquantum-sk-stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% {
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}

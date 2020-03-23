@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap">
+</head>
+<body>
+  <div class='nquantum-chat-window' id='nquantum-chat-window'>
+    <header>
+      <div class='bot-name'>
+        D Spaces
+      </div>
+    </header>
+    <div class='nquantum-conversation'>
+      
+    </div>
+    <div class="primary-action-area">
+      <form class='nquantum-main-input-form'>
+        <input type='text' class='nquantum-main-input' placeholder='Type a message...' aria-labelledby='nquantum-main-input-helper-text'>
+        <span class='screen-reader-text' id='nquantum-main-input-helper-text'>Type a message...</span>
+        <button type="submit" class='nquantum-main-input-submit' disabled>
+          <svg style='width:36px;height:36px;margin:auto;' viewBox='0 0 24 24'>
+            <path fill='currentColor' d='M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M8,7.71V11.05L15.14,12L8,12.95V16.29L18,12L8,7.71Z' />
+          </svg>
+        </button>
+      </form>
+    </div>
+    <footer>
+      <a href='http://nquantum.ai' target='_blank'>Powered by nQuantum.</a>
+    </footer>
+  </div>
+  <script src="script.js" defer></script>
+</body>
+</html>
