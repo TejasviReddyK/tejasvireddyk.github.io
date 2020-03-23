@@ -35,7 +35,7 @@
     var x = {};
     console.log('hey! waah!');
     x.timeStamp = (new Date()).getTime();
-    x.recipient_id = recipientId;
+    x.recipientId = recipientId;
     x.conversation = nquantumChatLog;
     x = JSON.stringify(x);
     var y = new FormData();
